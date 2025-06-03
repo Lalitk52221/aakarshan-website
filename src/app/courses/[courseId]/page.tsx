@@ -1,6 +1,6 @@
 "use client"
 import { useParams } from 'next/navigation';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import CourseDetails from '../../../components/CourseDetails';
 // import { courses } from '@/lib/data';
 

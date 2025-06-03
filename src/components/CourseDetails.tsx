@@ -273,7 +273,7 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
                   <div className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 border border-amber-500/30 rounded-xl p-6">
                     <h4 className="font-bold text-lg mb-4 text-amber-400">Career Opportunities</h4>
                     <p className="mb-4 text-gray-300">
-                      After completing this course, you'll be qualified for positions such as:
+                      After completing this course, you&apos;ll be qualified for positions such as:
                     </p>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {course.id === 'basic-computer-tally' && (
