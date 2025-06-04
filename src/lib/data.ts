@@ -39,9 +39,9 @@ export const trainers = [
 
 export const courses = [
     {
-      id: 'basic-computer-tally',
-      title: 'Basic Computer & Tally Prime',
-      description: 'Master computer fundamentals and professional accounting with Tally Prime',
+      id: 'basic-computer',
+      title: 'Basic Computer',
+      description: 'Master computer fundamentals and Advance Excel for professional success',
       fees: "1200/-",
       image: 'computer',
       benefits: [
@@ -85,6 +85,22 @@ export const courses = [
       ],
       duration: '4 months',
       color: 'from-pink-500 to-rose-600'
+    },
+    {
+      id: 'tally-prime',
+      title: 'Tally Prime',
+      description: 'Become an expert in Tally Prime for professional accounting and GST management.',
+      fees: "1500/-",
+      image: 'computer',
+      benefits: [
+        'Comprehensive Tally training',
+        'GST and tax management',
+        'Practical business scenarios',
+        'Industry-recognized certificate',
+        'Placement support'
+      ],
+      duration: '3 months',
+      color: 'from-green-400 to-blue-500'
     }
   ];
 

@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,11 +26,24 @@ export default function Navbar() {
     { name: "Contact", href: "/#contact" },
   ];
 
+  // Smooth scroll handler
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+      const id = href.replace('/#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        setIsOpen(false);
+      }
+    }
+  };
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-gray-900/90 backdrop-blur-md border-b border-blue-500/20 py-2"
+          ? "bg-gray-900/50 backdrop-blur-md border-b border-blue-500/20 py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -57,10 +69,11 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link key={link.name} href={link.href}>
+              <Link key={link.name} href={link.href} scroll={false}>
                 <motion.span
-                  className="text-gray-300 hover:text-white transition-colors font-medium cursor-pointer"
+                  className="text-gray-300 hover:text-orange-400 transition-colors font-medium cursor-pointer"
                   whileHover={{ y: -2 }}
+                  onClick={e => handleNavClick(e, link.href)}
                 >
                   {link.name}
                 </motion.span>
@@ -124,7 +137,9 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur-lg z-40"
+            className={`md:hidden fixed inset-0 z-40 backdrop-blur-lg transition-colors duration-500 ${
+              scrolled ? 'bg-gray-900/95' : 'bg-gray-900/50'
+            }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -132,10 +147,10 @@ export default function Navbar() {
           >
             <div className="flex flex-col items-center justify-center h-full space-y-10">
               {navLinks.map((link) => (
-                <Link key={link.name} href={link.href}>
+                <Link key={link.name} href={link.href} scroll={false}>
                   <motion.span
-                    className="text-2xl font-medium text-gray-300 hover:text-white cursor-pointer"
-                    onClick={() => setIsOpen(false)}
+                    className="text-2xl font-medium text-gray-300 hover:text-orange-500 cursor-pointer"
+                    onClick={e => handleNavClick(e, link.href)}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1 }}

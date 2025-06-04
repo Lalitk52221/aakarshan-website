@@ -10,8 +10,8 @@ export default function CoursePage() {
 
   const courses = [
     {
-      id: 'basic-computer-tally',
-      title: 'Basic Computer & Tally Prime',
+      id: 'basic-computer',
+      title: 'Basic Computere',
       description: 'Master computer fundamentals and professional accounting with Tally Prime',
       fees: "1200/-",
       benefits: [

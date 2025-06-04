@@ -36,9 +36,9 @@ export default function CourseCard({ course }: CourseCardProps) {
       className="h-full"
       whileHover={{ y: -10 }}
     >
-      <div className={`h-full bg-gradient-to-br ${course.color} rounded-2xl overflow-hidden shadow-2xl`}>
-        <div className="p-1">
-          <div className="bg-gray-900 rounded-xl p-6 h-full">
+      <div className={`h-full bg-gradient-to-br ${course.color} rounded-2xl overflow-hidden shadow-2xl flex flex-col`}>
+        <div className="p-1 flex-1 flex flex-col">
+          <div className="bg-gray-900 rounded-xl p-6 h-full justify-between flex flex-col">
             <div className="flex justify-between items-start mb-6">
               <div className="text-5xl mb-4">{getImage()}</div>
               <span className=" flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 text-white text-sm font-semibold px-3 py-1 rounded-full">

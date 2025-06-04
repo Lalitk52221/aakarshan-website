@@ -1,4 +1,3 @@
-// components/CourseDetails.tsx
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import RegistrationForm from './RegistrationForm';

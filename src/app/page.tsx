@@ -35,7 +35,8 @@ export default function HomePage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                Transform Your <span className="text-amber-400">Career</span> Today
+                {/* Transform Your <span className="text-amber-400">Career</span> Today */}
+                Aakarshan Skill <span className="text-amber-400">Development</span> Center
               </motion.h1>
               <motion.p 
                 className="text-xl text-gray-300 mb-8 max-w-xl"
@@ -107,7 +108,7 @@ export default function HomePage() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {courses.map((course, index) => (
               <motion.div
                 key={course.id}
