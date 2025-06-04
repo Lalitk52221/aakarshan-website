@@ -13,7 +13,7 @@ export default function CoursePage() {
       id: 'basic-computer-tally',
       title: 'Basic Computer & Tally Prime',
       description: 'Master computer fundamentals and professional accounting with Tally Prime',
-      fees: 1200,
+      fees: "1200/-",
       benefits: [
         'Industry-recognized certification',
         'Hands-on practical training',
@@ -48,7 +48,7 @@ export default function CoursePage() {
       id: 'spoken-english',
       title: 'Spoken English',
       description: 'Build confidence in English communication for all situations',
-      fees: 1200,
+      fees: "1200/-",
       benefits: [
         'Daily conversation practice',
         'Accent reduction techniques',
@@ -82,7 +82,7 @@ export default function CoursePage() {
       id: 'beauty-wellness',
       title: 'Beauty & Wellness',
       description: 'Master beauty techniques and wellness practices for a rewarding career',
-      fees: 1800,
+      fees: '1800/-',
       benefits: [
         'Internationally recognized certification',
         'Practical salon training',

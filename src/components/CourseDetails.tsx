@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import RegistrationForm from './RegistrationForm';
+import { FaRupeeSign } from 'react-icons/fa';
 
 interface Trainer {
   name: string;
@@ -13,7 +14,7 @@ interface Course {
   id: string;
   title: string;
   description: string;
-  fees: number;
+  fees: string;
   benefits: string[];
   duration: string;
   syllabus: string[];
@@ -29,7 +30,7 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
   const [activeTab, setActiveTab] = useState('overview');
 
   return (
-    <div className="max-w-7xl mx-auto py-16 px-4">
+    <div className="max-w-7xl mx-auto py-16 pt-28 px-4">
       {/* Course Header */}
       <motion.div 
         className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl overflow-hidden mb-16"
@@ -68,7 +69,7 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
                     <span className="font-bold">Duration:</span> {course.duration}
                   </div>
                   <div className="bg-amber-900/50 text-amber-400 px-4 py-2 rounded-full">
-                    <span className="font-bold">Fees:</span> ₹{course.fees}
+                    <span className="font-bold  flex items-center justify-center">Fees: <FaRupeeSign size={15} className='ml-1.5'/>{course.fees}</span>
                   </div>
                 </motion.div>
                 
@@ -177,9 +178,9 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
                     
                     <button 
                       onClick={() => setShowForm(true)}
-                      className="mt-8 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
+                      className="flex items-center justify-center mt-8 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300"
                     >
-                      Enroll Now at ₹{course.fees}
+                      Enroll Now at <FaRupeeSign size={15} className='ml-1.5' />{course.fees}
                     </button>
                   </div>
                 </motion.div>

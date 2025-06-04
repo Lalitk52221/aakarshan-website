@@ -48,7 +48,7 @@ export default function Navbar() {
                 width={130}
                 height={130}
                 alt="logo"
-                className="w-full"
+                className="w-full" 
               />
               
             </motion.div>
@@ -78,7 +78,7 @@ export default function Navbar() {
                 width={100}
                 height={100}
                 alt="logo"
-                className="w-full "
+                className="hidden w-full md:block "
               />
           </motion.button>
 

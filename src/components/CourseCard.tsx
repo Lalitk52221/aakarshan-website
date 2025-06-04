@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { FaRupeeSign } from 'react-icons/fa';
 
 interface Course {
   id: string;
   title: string;
   description: string;
-  fees: number;
+  fees: string;
   image: string;
   benefits: string[];
   duration: string;
@@ -40,8 +41,8 @@ export default function CourseCard({ course }: CourseCardProps) {
           <div className="bg-gray-900 rounded-xl p-6 h-full">
             <div className="flex justify-between items-start mb-6">
               <div className="text-5xl mb-4">{getImage()}</div>
-              <span className="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                ₹{course.fees}
+              <span className=" flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                <FaRupeeSign size={13} />{course.fees}
               </span>
             </div>
             

@@ -7,6 +7,7 @@ import TrainerSection from '@/components/TrainerSection';
 import LmsSection from '@/components/LmsSection';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import { courses } from '@/lib/data';
+import { FaRupeeSign } from 'react-icons/fa';
 
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
@@ -78,11 +79,11 @@ export default function HomePage() {
                   </div>
                 </div>
                 <motion.div 
-                  className="absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg"
+                  className="flex items-center justify-center absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 2 }}
                 >
-                  Rs.1200 Starting
+                <FaRupeeSign size={15} />1200/- only
                 </motion.div>
               </div>
             </motion.div>

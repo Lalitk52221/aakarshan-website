@@ -1,48 +1,13 @@
 "use client";
+import { footerLinks, socialLinks } from '@/lib/data';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
-  const footerLinks = [
-    {
-      title: 'Courses',
-      links: [
-        { name: 'Basic Computer & Tally', href: '/courses/basic-computer-tally' },
-        { name: 'Spoken English', href: '/courses/spoken-english' },
-        { name: 'Beauty & Wellness', href: '/courses/beauty-wellness' },
-        { name: 'All Courses', href: '/#courses' },
-      ],
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Learning Portal', href: '/lms' },
-        { name: 'Career Guidance', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'FAQs', href: '/faqs' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Trainers', href: '/#trainers' },
-        { name: 'Contact Us', href: '/#contact' },
-        { name: 'Privacy Policy', href: '/privacy' },
-      ],
-    },
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', icon: '📘', href: '#' },
-    { name: 'Instagram', icon: '📸', href: '#' },
-    { name: 'Twitter', icon: '🐦', href: '#' },
-    { name: 'YouTube', icon: '▶️', href: '#' },
-    { name: 'LinkedIn', icon: '💼', href: '#' },
-  ];
-
+  
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 border-t border-blue-500/20 pt-20 pb-10 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,13 +16,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <div className="flex items-center space-x-2 mb-6 cursor-pointer">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-xl w-10 h-10 rounded-lg flex items-center justify-center">
-                  N
-                </div>
-                <div>
-                  <span className="text-white font-bold text-xl">Nexus</span>
-                  <span className="text-blue-400 font-bold text-xl">Institute</span>
-                </div>
+                <Image src="/images/Aakarshan.png" width={200} height={200} alt="logo" className="w-48" />
               </div>
             </Link>
             <p className="text-gray-400 mb-6">
@@ -98,19 +57,19 @@ export default function Footer() {
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start">
                 <div className="mr-3 text-blue-400">📍</div>
-                <span>123 Education Street, Learning District, Knowledge City - 560001</span>
+                <span>Aakarshan Skill Development Center, Sona Marble Building, Bhondsi, Gurugram, Haryana - 122102</span>
               </li>
               <li className="flex items-start">
                 <div className="mr-3 text-blue-400">📞</div>
-                <span>+91 98765 43210</span>
+                <span>+91 8851245368</span>
               </li>
               <li className="flex items-start">
                 <div className="mr-3 text-blue-400">✉️</div>
-                <span>info@nexusinstitute.com</span>
+                <span>lalitkumar52221@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <div className="mr-3 text-blue-400">🕒</div>
-                <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                <span>Mon-Sat: 9:00 AM - 5:30 PM</span>
               </li>
             </ul>
           </div>
@@ -147,7 +106,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-blue-500/10 text-center">
           <p className="text-gray-500">
-            © {currentYear} Nexus Institute. All rights reserved.
+            © {currentYear} Aakarshan Skill Development Center. All rights reserved.
           </p>
           <div className="flex justify-center space-x-6 mt-4 text-gray-500 text-sm">
             <Link href="/terms"><span className="hover:text-white">Terms of Service</span></Link>

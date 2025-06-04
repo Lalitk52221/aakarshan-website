@@ -42,7 +42,7 @@ export const courses = [
       id: 'basic-computer-tally',
       title: 'Basic Computer & Tally Prime',
       description: 'Master computer fundamentals and professional accounting with Tally Prime',
-      fees: 1200,
+      fees: "1200/-",
       image: 'computer',
       benefits: [
         'Industry-recognized certification',
@@ -58,7 +58,7 @@ export const courses = [
       id: 'spoken-english',
       title: 'Spoken English',
       description: 'Build confidence in English communication for all situations',
-      fees:1200,
+      fees:"1200/-",
       image: 'english',
       benefits: [
         'Daily conversation practice',
@@ -74,7 +74,7 @@ export const courses = [
       id: 'beauty-wellness',
       title: 'Beauty & Wellness',
       description: 'Master beauty techniques and wellness practices for a rewarding career',
-      fees: 1800,
+      fees: "1800/-",
       image: 'beauty',
       benefits: [
         'Internationally recognized certification',
@@ -88,32 +88,40 @@ export const courses = [
     }
   ];
 
-  export const footerLinks = [
+ export const footerLinks = [
     {
-      title: 'Quick Links',
+      title: 'Courses',
       links: [
-        { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/about' },
-        { name: 'Programs', path: '/courses' },
-        { name: 'Admissions', path: '/admissions' },
+        { name: 'Basic Computer & Tally', href: '/courses/basic-computer-tally' },
+        { name: 'Spoken English', href: '/courses/spoken-english' },
+        { name: 'Beauty & Wellness', href: '/courses/beauty-wellness' },
+        { name: 'All Courses', href: '/#courses' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Student Portal', path: '/portal' },
-        { name: 'Library', path: '/library' },
-        { name: 'Research', path: '/research' },
-        { name: 'Alumni', path: '/alumni' },
+        { name: 'Learning Portal', href: '/lms' },
+        { name: 'Career Guidance', href: '/careers' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'FAQs', href: '/faqs' },
       ],
     },
     {
-      title: 'Support',
+      title: 'Company',
       links: [
-        { name: 'Contact Us', path: '/contact' },
-        { name: 'FAQs', path: '/faqs' },
-        { name: 'Privacy Policy', path: '/privacy' },
-        { name: 'Terms of Service', path: '/terms' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Trainers', href: '/#trainers' },
+        { name: 'Contact Us', href: '/#contact' },
+        { name: 'Privacy Policy', href: '/privacy' },
       ],
     },
+  ];
+
+ export const socialLinks = [
+    { name: 'Facebook', icon: '📘', href: '#' },
+    { name: 'Instagram', icon: '📸', href: '#' },
+    { name: 'Twitter', icon: '🐦', href: '#' },
+    { name: 'YouTube', icon: '▶️', href: '#' },
+    { name: 'LinkedIn', icon: '💼', href: '#' },
   ];
