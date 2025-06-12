@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import Image from 'next/image';
 import { FaRupeeSign } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+import { useContext } from 'react';
+import { LoadingBarContext } from './LoadingBarProvider';
+
 
 interface Course {
   id: string;
@@ -8,7 +12,7 @@ interface Course {
   description: string;
   fees: string;
   image: string;
-  benefits: string[];
+  benefits: string[]; 
   duration: string;
   color: string;
 }
@@ -18,14 +22,20 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({ course }: CourseCardProps) {
+  const router = useRouter();
+  const { start } = useContext(LoadingBarContext);
+
+
   const getImage = () => {
-    switch (course.image) {
+    switch (course.image) { 
       case 'computer':
-        return '💻';
+        return <Image src="/images/Msoffice.png" alt="Computer Course" width={80} height={80} />;
       case 'english':
-        return '🎤';
+        return <Image src="/images/English.png" alt="English Course" width={80} height={80} />;
       case 'beauty':
-        return '💄';
+        return <Image src="/images/Beauty.png" alt="Beauty Course" width={80} height={80} />;
+      case 'tally':
+        return <Image src="/images/Tally.png" alt="Beauty Course" width={80} height={80} />;
       default:
         return '📚';
     }
@@ -61,17 +71,21 @@ export default function CourseCard({ course }: CourseCardProps) {
               </ul>
             </div>
             
-            <div className="flex justify-between items-center mt-8">
+            <div className="flex justify-between items-center mt-8 ">
               <span className="text-sm text-gray-500">{course.duration}</span>
-              <Link href={`/courses/${course.id}`}>
-                <motion.button 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Details
-                </motion.button>
-              </Link>
+              <motion.button 
+                className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  start();
+                  setTimeout(() => {
+                    router.push(`/courses/${course.id}`);
+                  }, 300);
+                }}
+              >
+                View Details
+              </motion.button>
             </div>
           </div>
         </div>

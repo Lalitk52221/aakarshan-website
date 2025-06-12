@@ -19,11 +19,12 @@ export default function Navbar() {
 
   // Add type for navLinks
   const navLinks: { name: string; href: string }[] = [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/#home" },
     { name: "Courses", href: "/#courses" },
     { name: "Trainers", href: "/#trainers" },
     { name: "LMS", href: "/#lms" },
     { name: "Contact", href: "/#contact" },
+    { name: "Payment", href: "/payment" },
   ];
 
   // Smooth scroll handler
@@ -71,7 +72,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.name} href={link.href} scroll={false}>
                 <motion.span
-                  className="text-gray-300 hover:text-orange-400 transition-colors font-medium cursor-pointer"
+                  className="text-gray-300 hover:text-orange-400 hover:text-lg transition-all font-medium cursor-pointer"
                   whileHover={{ y: -2 }}
                   onClick={e => handleNavClick(e, link.href)}
                 >

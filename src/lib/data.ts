@@ -1,3 +1,5 @@
+// import { img } from "framer-motion/client";
+
 export  const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -44,6 +46,7 @@ export const courses = [
       description: 'Master computer fundamentals and Advance Excel for professional success',
       fees: "1200/-",
       image: 'computer',
+      img: '/images/Msoffice.png',
       benefits: [
         'Industry-recognized certification',
         'Hands-on practical training',
@@ -55,11 +58,29 @@ export const courses = [
       color: 'from-blue-500 to-purple-600'
     },
     {
+      id: 'tally-prime',
+      title: 'Tally Prime',
+      description: 'Become an expert in Tally Prime for professional accounting and GST management.',
+      fees: "1500/-",
+      image: 'tally',
+      img: '/images/Tally.png',
+      benefits: [
+        'Comprehensive Tally training',
+        'GST and tax management',
+        'Practical business scenarios',
+        'Industry-recognized certificate',
+        'Placement support'
+      ],
+      duration: '4 months',
+      color: 'from-green-400 to-blue-500'
+    },
+    {
       id: 'spoken-english',
       title: 'Spoken English',
       description: 'Build confidence in English communication for all situations',
       fees:"1200/-",
       image: 'english',
+      img: '/images/English.png',
       benefits: [
         'Daily conversation practice',
         'Accent reduction techniques',
@@ -76,6 +97,7 @@ export const courses = [
       description: 'Master beauty techniques and wellness practices for a rewarding career',
       fees: "1800/-",
       image: 'beauty',
+      img: '/images/Beauty.png',
       benefits: [
         'Internationally recognized certification',
         'Practical salon training',
@@ -86,22 +108,7 @@ export const courses = [
       duration: '4 months',
       color: 'from-pink-500 to-rose-600'
     },
-    {
-      id: 'tally-prime',
-      title: 'Tally Prime',
-      description: 'Become an expert in Tally Prime for professional accounting and GST management.',
-      fees: "1500/-",
-      image: 'computer',
-      benefits: [
-        'Comprehensive Tally training',
-        'GST and tax management',
-        'Practical business scenarios',
-        'Industry-recognized certificate',
-        'Placement support'
-      ],
-      duration: '3 months',
-      color: 'from-green-400 to-blue-500'
-    }
+    
   ];
 
  export const footerLinks = [

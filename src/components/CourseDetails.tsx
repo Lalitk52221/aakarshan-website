@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import RegistrationForm from './RegistrationForm';
 import { FaRupeeSign } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface Trainer {
+  img: string;
   name: string;
   experience: string;
   expertise: string;
@@ -90,9 +92,10 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-full w-48 h-48 flex items-center justify-center">
                     <div className="bg-gray-900 rounded-full w-44 h-44 flex items-center justify-center">
                       <div className="text-5xl">
-                        {course.id === 'basic-computer-tally' && '💻'}
-                        {course.id === 'spoken-english' && '🎤'}
-                        {course.id === 'beauty-wellness' && '💄'}
+                        {course.id === 'basic-computer' && <Image src="/images/Msoffice.png" alt="Computer Course" width={80} height={80} />}
+                        {course.id === 'tally' && <Image src="/images/Tally.png" alt="Tally Course" width={80} height={80} />}
+                        {course.id === 'spoken-english' && <Image src="/images/English.png" alt="Computer Course" width={80} height={80} />}
+                        {course.id === 'beauty-wellness' && <Image src="/images/Beauty.png" alt="Computer Course" width={80} height={80} />}
                       </div>
                     </div>
                   </div>
@@ -230,7 +233,9 @@ export default function CourseDetails({ course }: CourseDetailsProps) {
                         <div className="flex items-start">
                           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-full mr-6">
                             <div className="bg-gray-800 rounded-full p-1">
-                              <div className="bg-gray-200 border-2 border-dashed rounded-full w-16 h-16" />
+                              <div className=" rounded-full w-16 h-16 items-center justify-center flex ">
+                                  <Image src={trainer.img} alt='trainer-pic' width={100} height={100} className='w-full rounded-full object-cover' />
+                                </div>
                             </div>
                           </div>
                           <div>

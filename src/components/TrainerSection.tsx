@@ -30,9 +30,9 @@ export default function TrainerSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <div className="h-full bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/20 rounded-2xl overflow-hidden shadow-xl">
-                <div className="p-1">
-                  <div className="bg-gray-900 rounded-xl p-6 h-full">
+              <div className="h-full bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/20 rounded-2xl overflow-hidden shadow-xl flex flex-col">
+                <div className="p-1 flex-1 flex flex-col">
+                  <div className="bg-gray-900 rounded-xl p-6 h-full flex flex-col justify-between">
                     <div className="flex flex-col items-center mb-6">
                       <div className="relative mb-4">
                         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-full">

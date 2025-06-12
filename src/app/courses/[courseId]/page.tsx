@@ -22,7 +22,7 @@ export default function CoursePage() {
         'GST filing knowledge',
         'Data security practices'
       ],
-      duration: '2 months',
+      duration: '6 months',
       syllabus: [
         'Computer Fundamentals',
         'MS Office (Word, Excel, PowerPoint)',
@@ -38,8 +38,45 @@ export default function CoursePage() {
       trainers: [
         {
           name: 'Lalit kumar',
-          experience: '6+ years',
-          expertise: 'Accounting Software Specialist'
+          experience: '5+ years',
+          expertise: 'Accounting Software Specialist',
+          img: '/images/trainers/Lalit.jpg',
+        },
+        
+      ]
+    },
+    {
+      id: 'tally',
+      title: 'Tally Prime',
+      description: 'Master computer fundamentals and professional accounting with Tally Prime',
+      fees: "1500/-",
+      benefits: [
+        'Industry-recognized certification',
+        'Hands-on practical training',
+        'Placement assistance',
+        'Financial accounting expertise',
+        'GST filing knowledge',
+        'Data security practices'
+      ],
+      duration: '4 months',
+      syllabus: [
+        'Computer Fundamentals',
+        'MS Office (Word, Excel, PowerPoint)',
+        'Internet & Email Basics',
+        'Tally Prime Installation & Setup',
+        'Accounting Principles',
+        'GST Filing & E-Way Bills',
+        'Inventory Management',
+        'Payroll Processing',
+        'Data Backup & Security',
+        'Final Project & Certification'
+      ],
+      trainers: [
+        {
+          name: 'Lalit kumar',
+          experience: '5+ years',
+          expertise: 'Accounting Software Specialist',
+          img: '/images/trainers/Lalit.jpg',
         },
         
       ]
@@ -57,7 +94,7 @@ export default function CoursePage() {
         'Vocabulary building',
         'Business communication skills'
       ],
-      duration: '3 months',
+      duration: '4 months',
       syllabus: [
         'Grammar Fundamentals',
         'Pronunciation & Accent Training',
@@ -73,8 +110,9 @@ export default function CoursePage() {
       trainers: [
         {
           name: 'Gladys N. Baite',
-          experience: '4+ years',
-          expertise: 'English Language Specialist'
+          experience: '3+ years',
+          expertise: 'English Language Specialist',
+          img:"https://avatar.iran.liara.run/public/75",
         }
       ]
     },
@@ -106,9 +144,10 @@ export default function CoursePage() {
       ],
       trainers: [
         {
-          name: 'Ayesha Khan',
+          name: 'Kiara Foujdar',
           experience: '2+ years',
-          expertise: 'Beauty & Wellness Expert'
+          expertise: 'Beauty & Wellness Expert',
+          img:"https://avatar.iran.liara.run/public/69",
         }
       ]
     }

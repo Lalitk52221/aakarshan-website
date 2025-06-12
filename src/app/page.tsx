@@ -20,7 +20,7 @@ export default function HomePage() {
       </div>
             
       {/* Hero Section */}
-      <header className="relative py-28 px-4 z-10">
+      <header id='home' className="relative py-28 px-4 z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center">
             <motion.div 
