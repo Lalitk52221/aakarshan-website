@@ -1,4 +1,4 @@
-// import { img } from "framer-motion/client";
+
 
 export  const navLinks = [
     { name: 'Home', path: '/' },
@@ -148,3 +148,19 @@ export const courses = [
     { name: 'YouTube', icon: '▶️', href: '#' },
     { name: 'LinkedIn', icon: '💼', href: '#' },
   ];
+
+  export const msWordNotesTitle = [
+    { title: 'Introduction to MS Word', href: '/notes/ms-word/introduction' },
+    { title: 'Formatting Text', href: '/notes/ms-word/formatting-text' },
+    { title: 'Working with Tables', href: '/notes/ms-word/tables' },
+    { title: 'Page Layout and Design', href: '/notes/ms-word/page-layout' },
+    { title: 'Inserting Images and Objects', href: '/notes/ms-word/inserting-images' },
+    { title: 'Using Headers and Footers', href: '/notes/ms-word/headers-footers' },
+    { title: 'Creating and Using Templates', href: '/notes/ms-word/templates' },
+    { title: 'Reviewing and Collaborating', href: '/notes/ms-word/reviewing-collaborating' },
+    {title: 'Insert Charts and Graphs', href: '/notes/ms-word/charts-graphs' },
+    { title: 'Keyboard Shortcuts', href: '/notes/ms-word/keyboard-shortcuts'},
+    { title: 'Using Styles and Themes', href: '/notes/ms-word/styles-themes' },
+    { title: 'Mail Merge Basics', href: '/notes/ms-word/mail-merge' },
+
+  ]

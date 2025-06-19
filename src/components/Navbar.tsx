@@ -22,9 +22,10 @@ export default function Navbar() {
     { name: "Home", href: "/#home" },
     { name: "Courses", href: "/#courses" },
     { name: "Trainers", href: "/#trainers" },
-    { name: "LMS", href: "/#lms" },
     { name: "Contact", href: "/#contact" },
     { name: "Payment", href: "/payment" },
+    // { name: "LMS", href: "/#lms" },
+    { name: "LMS", href: "/lms" },
   ];
 
   // Smooth scroll handler
