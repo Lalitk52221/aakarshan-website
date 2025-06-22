@@ -1,166 +1,389 @@
-
-
-export  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Courses', path: '/courses' },
-    { name: 'Faculty', path: '/faculty' },
-    { name: 'Admissions', path: '/admissions' },
-    { name: 'Contact', path: '/contact' },
-  ];
+export const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Courses", path: "/courses" },
+  { name: "Faculty", path: "/faculty" },
+  { name: "Admissions", path: "/admissions" },
+  { name: "Contact", path: "/contact" },
+];
 
 export const trainers = [
-    {
-      id: 1,
-      name: "Lalit kumar",
-      expertise: "Computer & Tally Expert",
-      experience: "5+ years",
-      courses: ["Basic Computer", "Tally Prime"],
-      img:"/images/trainers/Lalit.jpg",
-      bio: "Industry-certified trainer with expertise in accounting software and computer fundamentals."
-    },
-    {
-      id: 2,
-      name: "Gladys N. Baite",
-      expertise: "English Language Specialist",
-      experience: "4+ years",
-      courses: ["Spoken English", "Business Communication"],
-      img:"https://avatar.iran.liara.run/public/75",
-      bio: "Cambridge-certified English trainer with focus on accent reduction and fluency development."
-    },
-    {
-      id: 3,
-      name: "Kiara Foujdar",
-      expertise: "Beauty & Wellness Expert",
-      experience: "2+ years",
-      courses: ["Makeup Artist", "Wellness Practices"],
-      img:"https://avatar.iran.liara.run/public/69",
-      bio: "Internationally VLCC certified beauty therapist with extensive salon and training experience."
-    }
-  ];
+  {
+    id: 1,
+    name: "Lalit kumar",
+    expertise: "Computer & Tally Expert",
+    experience: "5+ years",
+    courses: ["Basic Computer", "Tally Prime"],
+    img: "/images/trainers/Lalit.jpg",
+    bio: "Industry-certified trainer with expertise in accounting software and computer fundamentals.",
+  },
+  {
+    id: 2,
+    name: "Gladys N. Baite",
+    expertise: "English Language Specialist",
+    experience: "4+ years",
+    courses: ["Spoken English", "Business Communication"],
+    img: "https://avatar.iran.liara.run/public/75",
+    bio: "Cambridge-certified English trainer with focus on accent reduction and fluency development.",
+  },
+  {
+    id: 3,
+    name: "Kiara Foujdar",
+    expertise: "Beauty & Wellness Expert",
+    experience: "2+ years",
+    courses: ["Makeup Artist", "Wellness Practices"],
+    img: "https://avatar.iran.liara.run/public/69",
+    bio: "Internationally VLCC certified beauty therapist with extensive salon and training experience.",
+  },
+];
 
 export const courses = [
-    {
-      id: 'basic-computer',
-      title: 'Basic Computer',
-      description: 'Master computer fundamentals and Advance Excel for professional success',
-      fees: "1200/-",
-      image: 'computer',
-      img: '/images/Msoffice.png',
-      benefits: [
-        'Industry-recognized certification',
-        'Hands-on practical training',
-        'Placement assistance',
-        'Financial accounting expertise',
-        'GST filing knowledge'
-      ],
-      duration: '6 months',
-      color: 'from-blue-500 to-purple-600'
-    },
-    {
-      id: 'tally-prime',
-      title: 'Tally Prime',
-      description: 'Become an expert in Tally Prime for professional accounting and GST management.',
-      fees: "1500/-",
-      image: 'tally',
-      img: '/images/Tally.png',
-      benefits: [
-        'Comprehensive Tally training',
-        'GST and tax management',
-        'Practical business scenarios',
-        'Industry-recognized certificate',
-        'Placement support'
-      ],
-      duration: '4 months',
-      color: 'from-green-400 to-blue-500'
-    },
-    {
-      id: 'spoken-english',
-      title: 'Spoken English',
-      description: 'Build confidence in English communication for all situations',
-      fees:"1200/-",
-      image: 'english',
-      img: '/images/English.png',
-      benefits: [
-        'Daily conversation practice',
-        'Accent reduction techniques',
-        'Interview preparation',
-        'Public speaking skills',
-        'Vocabulary building'
-      ],
-      duration: '6 months',
-      color: 'from-amber-500 to-orange-600'
-    },
-    {
-      id: 'beauty-wellness',
-      title: 'Beauty & Wellness',
-      description: 'Master beauty techniques and wellness practices for a rewarding career',
-      fees: "1800/-",
-      image: 'beauty',
-      img: '/images/Beauty.png',
-      benefits: [
-        'Internationally recognized certification',
-        'Practical salon training',
-        'Entrepreneurship guidance',
-        'Skin and hair care expertise',
-        'Wellness therapy techniques'
-      ],
-      duration: '4 months',
-      color: 'from-pink-500 to-rose-600'
-    },
-    
-  ];
+  {
+    id: "basic-computer",
+    title: "Basic Computer",
+    description:
+      "Master computer fundamentals and Advance Excel for professional success",
+    fees: "1200/-",
+    image: "computer",
+    img: "/images/Msoffice.png",
+    benefits: [
+      "Industry-recognized certification",
+      "Hands-on practical training",
+      "Placement assistance",
+      "Financial accounting expertise",
+      "GST filing knowledge",
+    ],
+    duration: "6 months",
+    color: "from-blue-500 to-purple-600",
+  },
+  {
+    id: "tally-prime",
+    title: "Tally Prime",
+    description:
+      "Become an expert in Tally Prime for professional accounting and GST management.",
+    fees: "1500/-",
+    image: "tally",
+    img: "/images/Tally.png",
+    benefits: [
+      "Comprehensive Tally training",
+      "GST and tax management",
+      "Practical business scenarios",
+      "Industry-recognized certificate",
+      "Placement support",
+    ],
+    duration: "4 months",
+    color: "from-green-400 to-blue-500",
+  },
+  {
+    id: "spoken-english",
+    title: "Spoken English",
+    description: "Build confidence in English communication for all situations",
+    fees: "1200/-",
+    image: "english",
+    img: "/images/English.png",
+    benefits: [
+      "Daily conversation practice",
+      "Accent reduction techniques",
+      "Interview preparation",
+      "Public speaking skills",
+      "Vocabulary building",
+    ],
+    duration: "6 months",
+    color: "from-amber-500 to-orange-600",
+  },
+  {
+    id: "beauty-wellness",
+    title: "Beauty & Wellness",
+    description:
+      "Master beauty techniques and wellness practices for a rewarding career",
+    fees: "1800/-",
+    image: "beauty",
+    img: "/images/Beauty.png",
+    benefits: [
+      "Internationally recognized certification",
+      "Practical salon training",
+      "Entrepreneurship guidance",
+      "Skin and hair care expertise",
+      "Wellness therapy techniques",
+    ],
+    duration: "4 months",
+    color: "from-pink-500 to-rose-600",
+  },
+];
 
- export const footerLinks = [
-    {
-      title: 'Courses',
-      links: [
-        { name: 'Basic Computer & Tally', href: '/courses/basic-computer-tally' },
-        { name: 'Spoken English', href: '/courses/spoken-english' },
-        { name: 'Beauty & Wellness', href: '/courses/beauty-wellness' },
-        { name: 'All Courses', href: '/#courses' },
-      ],
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Learning Portal', href: '/lms' },
-        { name: 'Career Guidance', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'FAQs', href: '/faqs' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Trainers', href: '/#trainers' },
-        { name: 'Contact Us', href: '/#contact' },
-        { name: 'Privacy Policy', href: '/privacy' },
-      ],
-    },
-  ];
+export const footerLinks = [
+  {
+    title: "Courses",
+    links: [
+      { name: "Basic Computer & Tally", href: "/courses/basic-computer-tally" },
+      { name: "Spoken English", href: "/courses/spoken-english" },
+      { name: "Beauty & Wellness", href: "/courses/beauty-wellness" },
+      { name: "All Courses", href: "/#courses" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { name: "Learning Portal", href: "/lms" },
+      { name: "Career Guidance", href: "/careers" },
+      { name: "Blog", href: "/blog" },
+      { name: "FAQs", href: "/faqs" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "About Us", href: "/about" },
+      { name: "Our Trainers", href: "/#trainers" },
+      { name: "Contact Us", href: "/#contact" },
+      { name: "Privacy Policy", href: "/privacy" },
+    ],
+  },
+];
 
- export const socialLinks = [
-    { name: 'Facebook', icon: '📘', href: '#' },
-    { name: 'Instagram', icon: '📸', href: '#' },
-    { name: 'Twitter', icon: '🐦', href: '#' },
-    { name: 'YouTube', icon: '▶️', href: '#' },
-    { name: 'LinkedIn', icon: '💼', href: '#' },
-  ];
+export const socialLinks = [
+  { name: "Facebook", icon: "📘", href: "#" },
+  { name: "Instagram", icon: "📸", href: "#" },
+  { name: "Twitter", icon: "🐦", href: "#" },
+  { name: "YouTube", icon: "▶️", href: "#" },
+  { name: "LinkedIn", icon: "💼", href: "#" },
+];
 
-  export const msWordNotesTitle = [
-    { title: 'Introduction to MS Word', href: '/notes/ms-word/introduction' },
-    { title: 'Formatting Text', href: '/notes/ms-word/formatting-text' },
-    { title: 'Working with Tables', href: '/notes/ms-word/tables' },
-    { title: 'Page Layout and Design', href: '/notes/ms-word/page-layout' },
-    { title: 'Inserting Images and Objects', href: '/notes/ms-word/inserting-images' },
-    { title: 'Using Headers and Footers', href: '/notes/ms-word/headers-footers' },
-    { title: 'Creating and Using Templates', href: '/notes/ms-word/templates' },
-    { title: 'Reviewing and Collaborating', href: '/notes/ms-word/reviewing-collaborating' },
-    {title: 'Insert Charts and Graphs', href: '/notes/ms-word/charts-graphs' },
-    { title: 'Keyboard Shortcuts', href: '/notes/ms-word/keyboard-shortcuts'},
-    { title: 'Using Styles and Themes', href: '/notes/ms-word/styles-themes' },
-    { title: 'Mail Merge Basics', href: '/notes/ms-word/mail-merge' },
+export const courseMaterial = [
+  {
+    id: "basic-computer",
+    title: "Basic Computer",
+    topic: [
+      "Introduction to MS Word",
+      "Formatting Text",
+      "Using Styles and Themes",
+      "Working with Tables",
+      "Inserting Images and Objects",
+      "Insert Charts and Graphs",
+      "Page Layout and Design",
+      "Using Headers and Footers",
+      "Creating and Using Templates",
+      "Reviewing and Collaborating",
+      "Keyboard Shortcuts",
+      "Mail Merge Basics",
+      "Working with Columns",
+      "Creating Table of Contents",
+      "Using References and Citations",
+      "Protecting a Document with Password",
+      "Tracking Changes and Comments",
+      "Inserting Watermarks and Backgrounds",
+      "Creating Fillable Forms",
+      "Using Find and Replace",
+      "Working with Hyperlinks and Bookmarks",
+      "Using Macros in Word",
+    ],
+    detailedPageLink: [
+      "/course-material/ms-word/introduction",
+      "/course-material/ms-word/formatting-text",
+      "/course-material/ms-word/styles-themes",
+      "/course-material/ms-word/tables",
+      "/course-material/ms-word/inserting-images",
+      "/course-material/ms-word/charts-graphs",
+      "/course-material/ms-word/page-layout",
+      "/course-material/ms-word/headers-footers",
+      "/course-material/ms-word/templates",
+      "/course-material/ms-word/reviewing-collaborating",
+      "/course-material/ms-word/keyboard-shortcuts",
+      "/course-material/ms-word/mail-merge",
+      "/course-material/ms-word/columns",
+      "/course-material/ms-word/table-of-contents",
+      "/course-material/ms-word/references-citations",
+      "/course-material/ms-word/password-protection",
+      "/course-material/ms-word/track-changes",
+      "/course-material/ms-word/watermarks-backgrounds",
+      "/course-material/ms-word/fillable-forms",
+      "/course-material/ms-word/find-replace",
+      "/course-material/ms-word/hyperlinks-bookmarks",
+      "/course-material/ms-word/macros",
+    ],
+    excelTitle: [
+      "Introduction to MS Excel",
+      "Working with Cells and Ranges",
+      "Formatting Worksheets",
+      "Using Formulas and Functions",
+      "Creating Charts",
+      "Sorting and Filtering Data",
+      "Data Validation",
+      "Working with PivotTables",
+      "Conditional Formatting",
+      "Using Named Ranges",
+      "Protecting Worksheets",
+      "Keyboard Shortcuts",
+      "Introduction to MS Excel",
+      "Understanding Rows, Columns, and Cells",
+      "Using Formulas and Functions",
+      "Formatting Cells and Data",
+      "Creating Charts and Graphs",
+      "Sorting and Filtering Data",
+      "Working with Pivot Tables",
+      "Data Validation Techniques",
+      "Conditional Formatting",
+      "Using Excel Templates",
+      "Working with Multiple Worksheets",
+      "Basic Financial Calculations",
+    ],
 
-  ]
+    excelTitleLink: [
+      "/course-material/ms-excel/introduction",
+      "/course-material/ms-excel/cells-ranges",
+      "/course-material/ms-excel/formatting",
+      "/course-material/ms-excel/formulas-functions",
+      "/course-material/ms-excel/charts",
+      "/course-material/ms-excel/sorting-filtering",
+      "/course-material/ms-excel/data-validation",
+      "/course-material/ms-excel/pivot-tables",
+      "/course-material/ms-excel/conditional-formatting",
+      "/course-material/ms-excel/named-ranges",
+      "/course-material/ms-excel/protection",
+      "/course-material/ms-excel/keyboard-shortcuts",
+      "/course-material/ms-excel/introduction",
+      "/course-material/ms-excel/rows-columns-cells",
+      "/course-material/ms-excel/formulas-functions",
+      "/course-material/ms-excel/formatting-data",
+      "/course-material/ms-excel/charts-graphs",
+      "/course-material/ms-excel/sorting-filtering",
+      "/course-material/ms-excel/pivot-tables",
+      "/course-material/ms-excel/data-validation",
+      "/course-material/ms-excel/conditional-formatting",
+      "/course-material/ms-excel/templates",
+      "/course-material/ms-excel/multiple-worksheets",
+      "/course-material/ms-excel/financial-calculations",
+    ],
+  },
+  {
+    id: "tally-prime",
+    title: "Tally Prime",
+    topic: [
+      "Introduction to Tally Prime",
+      "Company Creation and Configuration",
+      "Ledger and Group Management",
+      "Voucher Entry Basics",
+      "Inventory Management",
+      "GST Implementation in Tally",
+      "Bank Reconciliation",
+      "Payroll Setup and Processing",
+      "Generating Financial Reports",
+      "Backup, Restore and Data Security",
+    ],
+
+    detailedPageLink: [
+      "/course-material/tally/introduction",
+      "/course-material/tally/company-creation",
+      "/course-material/tally/ledger-group-management",
+      "/course-material/tally/voucher-entry",
+      "/course-material/tally/inventory-management",
+      "/course-material/tally/gst-implementation",
+      "/course-material/tally/bank-reconciliation",
+      "/course-material/tally/payroll-processing",
+      "/course-material/tally/financial-reports",
+      "/course-material/tally/data-security",
+    ],
+  },
+  {
+    id: "spoken-english",
+    title: "Spoken English",
+    topic: [
+      "Basics of English Grammar",
+      "Common Vocabulary for Daily Use",
+      "Building Simple Sentences",
+      "Using Tenses in Conversation",
+      "Asking and Answering Questions",
+      "Telephone and Email Etiquette",
+      "Making Introductions and Greetings",
+      "Describing People and Places",
+      "Speaking with Confidence",
+      "Common Interview Questions",
+    ],
+
+    detailedPageLink: [
+      "/course-material/spoken-english/grammar-basics",
+      "/course-material/spoken-english/common-vocabulary",
+      "/course-material/spoken-english/simple-sentences",
+      "/course-material/spoken-english/tenses-usage",
+      "/course-material/spoken-english/questions-answers",
+      "/course-material/spoken-english/telephone-email",
+      "/course-material/spoken-english/greetings-introductions",
+      "/course-material/spoken-english/descriptions",
+      "/course-material/spoken-english/confidence-speaking",
+      "/course-material/spoken-english/interview-questions",
+    ],
+  },
+  {
+    id: "beauty-wellness",
+    title: "Beauty Wellness",
+    topic: [
+      "Introduction to Beauty & Wellness",
+      "Skin Anatomy and Care Techniques",
+      "Basic Facial Treatments",
+      "Hair Styling and Hair Care",
+      "Manicure and Pedicure Basics",
+      "Personal Grooming Essentials",
+      "Client Consultation and Hygiene",
+      "Makeup Application Techniques",
+      "Salon Tools and Equipment",
+      "Workplace Safety and Sanitation",
+    ],
+
+    detailedPageLink: [
+      "/course-material/beauty-wellness/introduction",
+      "/course-material/beauty-wellness/skin-care",
+      "/course-material/beauty-wellness/facial-treatments",
+      "/course-material/beauty-wellness/hair-care",
+      "/course-material/beauty-wellness/manicure-pedicure",
+      "/course-material/beauty-wellness/grooming",
+      "/course-material/beauty-wellness/client-consultation",
+      "/course-material/beauty-wellness/makeup-techniques",
+      "/course-material/beauty-wellness/tools-equipment",
+      "/course-material/beauty-wellness/safety-hygiene",
+    ],
+  },
+];
+// export const courseMaterial = [
+//   {
+//     id: "basic-computer",
+//     title: "Basic Computer",
+//     material: [
+//       {
+//         heading: "Introduction to MS Word",
+//         href: "/course-material/ms-word/introduction",
+//       },
+//       { heading: "Formatting Text", href: "/course-material/ms-word/formatting-text" },
+//       { heading: "Working with Tables", href: "/course-material/ms-word/tables" },
+//       { heading: "Page Layout and Design", href: "/course-material/ms-word/page-layout" },
+//       {
+//         heading: "Inserting Images and Objects",
+//         href: "/course-material/ms-word/inserting-images",
+//       },
+//       {
+//         heading: "Using Headers and Footers",
+//         href: "/course-material/ms-word/headers-footers",
+//       },
+//       {
+//         heading: "Creating and Using Templates",
+//         href: "/course-material/ms-word/templates",
+//       },
+//       {
+//         heading: "Reviewing and Collaborating",
+//         href: "/course-material/ms-word/reviewing-collaborating",
+//       },
+//       {
+//         heading: "Insert Charts and Graphs",
+//         href: "/course-material/ms-word/charts-graphs",
+//       },
+//       {
+//         heading: "Keyboard Shortcuts",
+//         href: "/course-material/ms-word/keyboard-shortcuts",
+//       },
+//       {
+//         heading: "Using Styles and Themes",
+//         href: "/course-material/ms-word/styles-themes",
+//       },
+//       { heading: "Mail Merge Basics", href: "/course-material/ms-word/mail-merge" },
+//     ],
+//   },
+// ];

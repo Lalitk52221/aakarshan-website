@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export default function Navbar() {
+  const navbarVariant = useSelector((state: RootState)=>state.navbar.variant);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,6 +29,12 @@ export default function Navbar() {
     { name: "Payment", href: "/payment" },
     // { name: "LMS", href: "/#lms" },
     { name: "LMS", href: "/lms" },
+  ];
+  const course: { name: string; href: string }[] = [
+    { name: "Basic Computer", href: "/course-material/basic-computer" },
+    { name: "Tally Prime", href: "/course-material/tally-prime" },
+    { name: "Spoken English", href: "/course-material/spoken-english" },
+    { name: "Beauty Wellness", href: "/course-material/beauty-wellness" },
   ];
 
   // Smooth scroll handler
@@ -70,7 +79,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navbarVariant==="default"? navLinks.map((link) => (
               <Link key={link.name} href={link.href} scroll={false}>
                 <motion.span
                   className="text-gray-300 hover:text-orange-400 hover:text-lg transition-all font-medium cursor-pointer"
@@ -80,7 +89,16 @@ export default function Navbar() {
                   {link.name}
                 </motion.span>
               </Link>
-            ))}
+            )):navbarVariant==="course"? course.map((link) => (
+              <Link key={link.name} href={link.href} scroll={false}>
+                <motion.span
+                  className="hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition-all text-sm py-2 px-4 text-gray-300 rounded ring-1 hover:bg-amber-800   font-medium cursor-pointer"
+                  whileHover={{ y: -2 }}
+                  onClick={e => handleNavClick(e, link.href)}
+                >
+                  {link.name}
+                </motion.span>
+              </Link>)):null}
           </nav>
 
           {/* Desktop Button */}

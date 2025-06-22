@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import CourseCard from '@/components/CourseCard';
 import RegistrationForm from '@/components/RegistrationForm';
@@ -8,9 +8,19 @@ import LmsSection from '@/components/LmsSection';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import { courses } from '@/lib/data';
 import { FaRupeeSign } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { setNavbarVariant } from '@/store/store';
 
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
+    const dispatch = useDispatch();
+   
+    useEffect(() => {
+      dispatch(setNavbarVariant('default'));
+      // return () => {
+      //   dispatch(setNavbarVariant('default'));
+      // };
+    }, [dispatch]);
   
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">

@@ -1,8 +1,18 @@
 "use client"
+import { setNavbarVariant } from '@/store/store';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 export default function LmsSection() {
+
+  const dispatch = useDispatch();
+ 
+  useEffect(() => {
+    dispatch(setNavbarVariant('lms'));
+  }, [dispatch]);
+
   return (
     <section className="relative py-36 px-4 z-10">
       <div className="max-w-7xl mx-auto">
