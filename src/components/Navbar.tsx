@@ -92,7 +92,7 @@ export default function Navbar() {
             )):navbarVariant==="course"? course.map((link) => (
               <Link key={link.name} href={link.href} scroll={false}>
                 <motion.span
-                  className="hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-white transition-all text-sm py-2 px-4 text-gray-300 rounded ring-1 hover:bg-amber-800   font-medium cursor-pointer"
+                  className="hover:bg-gradient-to-r  from-blue-600 to-purple-600 hover:text-white transition-all text-sm py-2 px-4 text-gray-300 border-b hover:bg-amber-800   font-medium cursor-pointer"
                   whileHover={{ y: -2 }}
                   onClick={e => handleNavClick(e, link.href)}
                 >

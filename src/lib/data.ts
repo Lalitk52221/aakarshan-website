@@ -19,7 +19,7 @@ export const trainers = [
   },
   {
     id: 2,
-    name: "Gladys N. Baite",
+    name: "Yasha",
     expertise: "English Language Specialist",
     experience: "4+ years",
     courses: ["Spoken English", "Business Communication"],
@@ -149,156 +149,325 @@ export const socialLinks = [
   { name: "LinkedIn", icon: "💼", href: "#" },
 ];
 
+export const msWordNotes = [
+  {
+    id: 1,
+    title: "Introduction to Ms Word",
+    Dec: "Ms Word is a word processing software developed by Microsoft. It is widely used for creating, editing, and formatting text documents. It offers various features such as spell check, grammar check, and the ability to insert images, tables, and hyperlinks. Ms Word also supports collaboration through comments and track changes.",
+    slug: "ms-word-introduction",
+  },
+  {
+    id: 2,
+    title: "Advanced Ms Word",
+    Dec: "Advanced Ms Word includes features such as mail merge, macros, and advanced formatting options. It allows users to automate repetitive tasks, create complex documents, and customize the user interface. Advanced Ms Word is useful for professionals who need to create high-quality documents efficiently.",
+    slug: "ms-word-advanced",
+  },
+  {
+    id: 3,
+    title: "Introduction to Ms Excel",
+    Dec: "Ms Excel is a spreadsheet software developed by Microsoft. It is used for data analysis, calculations, and creating charts and graphs. Ms Excel offers features such as formulas, functions, and pivot tables to help users organize and analyze data effectively.",
+    slug: "ms-excel-introduction",
+  },
+  {
+    id: 4,
+    title: "Advanced Ms Excel",
+    Dec: "Advanced Ms Excel includes features such as data validation, conditional formatting, and advanced charting options. It allows users to create complex spreadsheets, automate tasks with macros, and perform advanced data analysis using tools like Power Query and Power Pivot.",
+    slug: "ms-excel-advanced",
+  },
+  {
+    id: 5,
+    title: "Introduction to Ms PowerPoint",
+    Dec: "Ms PowerPoint is a presentation software developed by Microsoft. It is used to create slideshows for presentations, lectures, and meetings. Ms PowerPoint offers features such as slide transitions, animations, and the ability to insert multimedia elements like images, videos, and audio.",
+    slug: "ms-powerpoint-introduction",
+  },
+  {
+    id: 6,
+    title: "Advanced Ms PowerPoint",
+    Dec: "Advanced Ms PowerPoint includes features such as custom slide layouts, advanced animations, and collaboration tools. It allows users to create professional presentations with interactive elements, design templates, and the ability to share presentations online.",
+    slug: "ms-powerpoint-advanced",
+  },
+  {
+    id: 7,
+    title: "Introduction to Ms Access",
+    Dec: "Ms Access is a database management system developed by Microsoft. It is used to create and manage databases for storing and retrieving data. Ms Access offers features such as tables, queries, forms, and reports to help users organize and analyze data effectively.",
+    slug: "ms-access-introduction",
+  },
+  {
+    id: 8,
+    title: "Advanced Ms Access",
+    Dec: "Advanced Ms Access includes features such as macros, VBA programming, and advanced query options. It allows users to automate tasks, create complex databases, and customize the user interface for better data management.",
+    slug: "ms-access-advanced",
+  },
+  {
+    id: 9,
+    title: "Introduction to Ms Outlook",
+    Dec: "Ms Outlook is an email client developed by Microsoft. It is used for managing emails, calendars, contacts, and tasks. Ms Outlook offers features such as email organization, scheduling appointments, and setting reminders.",
+    slug: "ms-outlook-introduction",
+  },
+  {
+    id: 10,
+    title: "Advanced Ms Outlook",
+    Dec: "Advanced Ms Outlook includes features such as rules for email management, advanced search options, and integration with other Microsoft Office applications. It allows users to streamline their email workflow and improve productivity.",
+    slug: "ms-outlook-advanced",
+  },
+];
+
 export const courseMaterial = [
   {
     id: "basic-computer",
     title: "Basic Computer",
     topic: [
-      "Introduction to MS Word",
-      "Formatting Text",
-      "Using Styles and Themes",
-      "Working with Tables",
-      "Inserting Images and Objects",
-      "Insert Charts and Graphs",
-      "Page Layout and Design",
-      "Using Headers and Footers",
-      "Creating and Using Templates",
-      "Reviewing and Collaborating",
-      "Keyboard Shortcuts",
-      "Mail Merge Basics",
-      "Working with Columns",
-      "Creating Table of Contents",
-      "Using References and Citations",
-      "Protecting a Document with Password",
-      "Tracking Changes and Comments",
-      "Inserting Watermarks and Backgrounds",
-      "Creating Fillable Forms",
-      "Using Find and Replace",
-      "Working with Hyperlinks and Bookmarks",
-      "Using Macros in Word",
-    ],
-    detailedPageLink: [
-      "/course-material/ms-word/introduction",
-      "/course-material/ms-word/formatting-text",
-      "/course-material/ms-word/styles-themes",
-      "/course-material/ms-word/tables",
-      "/course-material/ms-word/inserting-images",
-      "/course-material/ms-word/charts-graphs",
-      "/course-material/ms-word/page-layout",
-      "/course-material/ms-word/headers-footers",
-      "/course-material/ms-word/templates",
-      "/course-material/ms-word/reviewing-collaborating",
-      "/course-material/ms-word/keyboard-shortcuts",
-      "/course-material/ms-word/mail-merge",
-      "/course-material/ms-word/columns",
-      "/course-material/ms-word/table-of-contents",
-      "/course-material/ms-word/references-citations",
-      "/course-material/ms-word/password-protection",
-      "/course-material/ms-word/track-changes",
-      "/course-material/ms-word/watermarks-backgrounds",
-      "/course-material/ms-word/fillable-forms",
-      "/course-material/ms-word/find-replace",
-      "/course-material/ms-word/hyperlinks-bookmarks",
-      "/course-material/ms-word/macros",
-    ],
-    excelTitle: [
-      "Introduction to MS Excel",
-      "Working with Cells and Ranges",
-      "Formatting Worksheets",
-      "Using Formulas and Functions",
-      "Creating Charts",
-      "Sorting and Filtering Data",
-      "Data Validation",
-      "Working with PivotTables",
-      "Conditional Formatting",
-      "Using Named Ranges",
-      "Protecting Worksheets",
-      "Keyboard Shortcuts",
-      "Introduction to MS Excel",
-      "Understanding Rows, Columns, and Cells",
-      "Using Formulas and Functions",
-      "Formatting Cells and Data",
-      "Creating Charts and Graphs",
-      "Sorting and Filtering Data",
-      "Working with Pivot Tables",
-      "Data Validation Techniques",
-      "Conditional Formatting",
-      "Using Excel Templates",
-      "Working with Multiple Worksheets",
-      "Basic Financial Calculations",
+      {
+        title: "Introduction to MS Word",
+        definition:
+          "Overview of Microsoft Word interface, features, and basic navigation.",
+      },
+      {
+        title: "Formatting Text",
+        definition:
+          "Changing font styles, sizes, colors, and applying bold, italics, underline, and more.",
+      },
+      {
+        title: "Using Styles and Themes",
+        definition:
+          "Applying pre-defined styles and themes for consistent formatting and design.",
+      },
+      {
+        title: "Working with Tables",
+        definition:
+          "Creating, formatting, and editing tables for organizing data.",
+      },
+      {
+        title: "Inserting Images and Objects",
+        definition:
+          "Adding pictures, clip art, shapes, SmartArt, and other objects into documents.",
+      },
+      {
+        title: "Insert Charts and Graphs",
+        definition:
+          "Creating visual data representations using charts and graphs directly in Word.",
+      },
+      {
+        title: "Page Layout and Design",
+        definition:
+          "Setting margins, orientation, paper size, and applying design elements.",
+      },
+      {
+        title: "Using Headers and Footers",
+        definition:
+          "Adding and customizing headers and footers, including page numbers and titles.",
+      },
+      {
+        title: "Creating and Using Templates",
+        definition:
+          "Using existing templates or designing custom templates to speed up document creation.",
+      },
+      {
+        title: "Reviewing and Collaborating",
+        definition:
+          "Using tools like spell check, comments, and compare documents to collaborate effectively.",
+      },
+      {
+        title: "Keyboard Shortcuts",
+        definition:
+          "Common shortcuts for faster editing and navigation, like Ctrl+B for bold.",
+      },
+      {
+        title: "Mail Merge Basics",
+        definition:
+          "Merging a Word document with a data source to personalize letters, envelopes, and emails.",
+      },
+      {
+        title: "Working with Columns",
+        definition:
+          "Splitting text into multiple columns for newsletter-style formatting.",
+      },
+      {
+        title: "Creating Table of Contents",
+        definition:
+          "Auto-generating a clickable TOC based on heading styles applied in the document.",
+      },
+      {
+        title: "Using References and Citations",
+        definition:
+          "Adding footnotes, endnotes, citations, and creating bibliographies using referencing tools.",
+      },
+      {
+        title: "Protecting a Document with Password",
+        definition:
+          "Securing documents with passwords to restrict unauthorized access or editing.",
+      },
+      {
+        title: "Tracking Changes and Comments",
+        definition:
+          "Monitoring edits and feedback during collaboration using revision tools.",
+      },
+      {
+        title: "Inserting Watermarks and Backgrounds",
+        definition:
+          "Adding text or image-based watermarks and customizing background color or images.",
+      },
+      {
+        title: "Creating Fillable Forms",
+        definition:
+          "Designing interactive forms with fields like checkboxes, dropdowns, and text input.",
+      },
+      {
+        title: "Using Find and Replace",
+        definition:
+          "Quickly locating and replacing words, phrases, or formatting across the document.",
+      },
+      {
+        title: "Working with Hyperlinks and Bookmarks",
+        definition:
+          "Linking to other documents, web pages, or document sections using hyperlinks and bookmarks.",
+      },
+      {
+        title: "Using Macros in Word",
+        definition:
+          "Automating repetitive tasks with recorded or custom macros written in VBA.",
+      },
     ],
 
-    excelTitleLink: [
-      "/course-material/ms-excel/introduction",
-      "/course-material/ms-excel/cells-ranges",
-      "/course-material/ms-excel/formatting",
-      "/course-material/ms-excel/formulas-functions",
-      "/course-material/ms-excel/charts",
-      "/course-material/ms-excel/sorting-filtering",
-      "/course-material/ms-excel/data-validation",
-      "/course-material/ms-excel/pivot-tables",
-      "/course-material/ms-excel/conditional-formatting",
-      "/course-material/ms-excel/named-ranges",
-      "/course-material/ms-excel/protection",
-      "/course-material/ms-excel/keyboard-shortcuts",
-      "/course-material/ms-excel/introduction",
-      "/course-material/ms-excel/rows-columns-cells",
-      "/course-material/ms-excel/formulas-functions",
-      "/course-material/ms-excel/formatting-data",
-      "/course-material/ms-excel/charts-graphs",
-      "/course-material/ms-excel/sorting-filtering",
-      "/course-material/ms-excel/pivot-tables",
-      "/course-material/ms-excel/data-validation",
-      "/course-material/ms-excel/conditional-formatting",
-      "/course-material/ms-excel/templates",
-      "/course-material/ms-excel/multiple-worksheets",
-      "/course-material/ms-excel/financial-calculations",
+    detailedPageLink: [
+      "/course-material/basic-computer/word-introduction",
+      "/course-material/basic-computer/word-formatting-text",
+      "/course-material/basic-computer/word-styles-themes",
+      "/course-material/basic-computer/word-tables",
+      "/course-material/basic-computer/word-inserting-images",
+      "/course-material/basic-computer/word-charts-graphs",
+      "/course-material/basic-computer/word-page-layout",
+      "/course-material/basic-computer/word-headers-footers",
+      "/course-material/basic-computer/word-templates",
+      "/course-material/basic-computer/word-reviewing-collaborating",
+      "/course-material/basic-computer/word-keyboard-shortcuts",
+      "/course-material/basic-computer/word-mail-merge",
+      "/course-material/basic-computer/word-columns",
+      "/course-material/basic-computer/word-table-of-contents",
+      "/course-material/basic-computer/word-references-citations",
+      "/course-material/basic-computer/word-password-protection",
+      "/course-material/basic-computer/word-track-changes",
+      "/course-material/basic-computer/word-watermarks-backgrounds",
+      "/course-material/basic-computer/word-fillable-forms",
+      "/course-material/basic-computer/word-find-replace",
+      "/course-material/basic-computer/word-hyperlinks-bookmarks",
+      "/course-material/basic-computer/word-macros",
     ],
   },
   {
     id: "tally-prime",
     title: "Tally Prime",
     topic: [
-      "Introduction to Tally Prime",
-      "Company Creation and Configuration",
-      "Ledger and Group Management",
-      "Voucher Entry Basics",
-      "Inventory Management",
-      "GST Implementation in Tally",
-      "Bank Reconciliation",
-      "Payroll Setup and Processing",
-      "Generating Financial Reports",
-      "Backup, Restore and Data Security",
+      {
+        title: "Introduction to Tally Prime",
+        definition:
+          "Overview of Tally Prime's interface, key features, and its role in business accounting.",
+      },
+      {
+        title: "Company Creation and Configuration",
+        definition:
+          "Steps to create a company in Tally Prime and configure basic settings such as financial year, base currency, and features.",
+      },
+      {
+        title: "Ledger and Group Management",
+        definition:
+          "Understanding ledgers and groups, and how to organize accounts for efficient financial tracking.",
+      },
+      {
+        title: "Voucher Entry Basics",
+        definition:
+          "Introduction to different voucher types and their entry procedures for recording business transactions.",
+      },
+      {
+        title: "Inventory Management",
+        definition:
+          "Methods to create, categorize, and manage inventory items with stock tracking in Tally Prime.",
+      },
+      {
+        title: "GST Implementation in Tally",
+        definition:
+          "Enabling and configuring GST features, assigning tax rates, and recording GST-compliant transactions.",
+      },
+      {
+        title: "Bank Reconciliation",
+        definition:
+          "Process of reconciling bank statements with recorded transactions to ensure accurate financial records.",
+      },
+      {
+        title: "Payroll Setup and Processing",
+        definition:
+          "Setting up employee records, salary structures, and generating payslips using Tally Prime’s payroll module.",
+      },
+      {
+        title: "Generating Financial Reports",
+        definition:
+          "Creating and analyzing key financial reports such as balance sheet, profit & loss account, and trial balance.",
+      },
+      {
+        title: "Backup, Restore and Data Security",
+        definition:
+          "Steps to back up and restore company data, and implement security controls to protect financial information.",
+      },
     ],
 
     detailedPageLink: [
-      "/course-material/tally/introduction",
-      "/course-material/tally/company-creation",
-      "/course-material/tally/ledger-group-management",
-      "/course-material/tally/voucher-entry",
-      "/course-material/tally/inventory-management",
-      "/course-material/tally/gst-implementation",
-      "/course-material/tally/bank-reconciliation",
-      "/course-material/tally/payroll-processing",
-      "/course-material/tally/financial-reports",
-      "/course-material/tally/data-security",
+      "/course-material/tally-prime/introduction",
+      "/course-material/tally-prime/company-creation",
+      "/course-material/tally-prime/ledger-group-management",
+      "/course-material/tally-prime/voucher-entry",
+      "/course-material/tally-prime/inventory-management",
+      "/course-material/tally-prime/gst-implementation",
+      "/course-material/tally-prime/bank-reconciliation",
+      "/course-material/tally-prime/payroll-processing",
+      "/course-material/tally-prime/financial-reports",
+      "/course-material/tally-prime/data-security",
     ],
   },
   {
     id: "spoken-english",
     title: "Spoken English",
     topic: [
-      "Basics of English Grammar",
-      "Common Vocabulary for Daily Use",
-      "Building Simple Sentences",
-      "Using Tenses in Conversation",
-      "Asking and Answering Questions",
-      "Telephone and Email Etiquette",
-      "Making Introductions and Greetings",
-      "Describing People and Places",
-      "Speaking with Confidence",
-      "Common Interview Questions",
-    ],
+  {
+    "title": "Basics of English Grammar",
+    "definition": "Introduction to fundamental grammar rules including parts of speech, sentence structure, and punctuation."
+  },
+  {
+    "title": "Common Vocabulary for Daily Use",
+    "definition": "Essential words and phrases used in everyday conversations, including greetings, actions, and objects."
+  },
+  {
+    "title": "Building Simple Sentences",
+    "definition": "Forming clear and correct sentences using subject-verb-object structures for basic communication."
+  },
+  {
+    "title": "Using Tenses in Conversation",
+    "definition": "Understanding and applying verb tenses like present, past, and future in everyday dialogue."
+  },
+  {
+    "title": "Asking and Answering Questions",
+    "definition": "Practicing question formats and appropriate responses for various real-life scenarios."
+  },
+  {
+    "title": "Telephone and Email Etiquette",
+    "definition": "Learning polite and professional communication techniques for calls and email writing."
+  },
+  {
+    "title": "Making Introductions and Greetings",
+    "definition": "Techniques to introduce oneself and others, and to greet appropriately in formal and informal settings."
+  },
+  {
+    "title": "Describing People and Places",
+    "definition": "Using adjectives and descriptive language to talk about appearances, personalities, and surroundings."
+  },
+  {
+    "title": "Speaking with Confidence",
+    "definition": "Building communication skills through activities that enhance pronunciation, clarity, and fluency."
+  },
+  {
+    "title": "Common Interview Questions",
+    "definition": "Reviewing frequently asked job interview questions and practicing effective responses."
+  }
+],
 
     detailedPageLink: [
       "/course-material/spoken-english/grammar-basics",
@@ -316,18 +485,48 @@ export const courseMaterial = [
   {
     id: "beauty-wellness",
     title: "Beauty Wellness",
-    topic: [
-      "Introduction to Beauty & Wellness",
-      "Skin Anatomy and Care Techniques",
-      "Basic Facial Treatments",
-      "Hair Styling and Hair Care",
-      "Manicure and Pedicure Basics",
-      "Personal Grooming Essentials",
-      "Client Consultation and Hygiene",
-      "Makeup Application Techniques",
-      "Salon Tools and Equipment",
-      "Workplace Safety and Sanitation",
-    ],
+    topic:[
+  {
+    "title": "Introduction to Beauty & Wellness",
+    "definition": "Overview of the beauty and wellness industry, career opportunities, and the importance of personal care."
+  },
+  {
+    "title": "Skin Anatomy and Care Techniques",
+    "definition": "Understanding skin layers, types, and effective methods for daily skincare and treatment preparation."
+  },
+  {
+    "title": "Basic Facial Treatments",
+    "definition": "Step-by-step facial procedures including cleansing, exfoliation, massage, and masking."
+  },
+  {
+    "title": "Hair Styling and Hair Care",
+    "definition": "Fundamentals of hair types, hair health, and techniques for cutting, styling, and maintenance."
+  },
+  {
+    "title": "Manicure and Pedicure Basics",
+    "definition": "Essential practices for nail grooming, hygiene, and relaxation techniques for hands and feet."
+  },
+  {
+    "title": "Personal Grooming Essentials",
+    "definition": "Daily hygiene routines and grooming practices to maintain a professional and polished appearance."
+  },
+  {
+    "title": "Client Consultation and Hygiene",
+    "definition": "Conducting effective consultations and maintaining hygiene protocols to ensure client satisfaction and safety."
+  },
+  {
+    "title": "Makeup Application Techniques",
+    "definition": "Basic makeup theory, face analysis, and application skills for various looks and occasions."
+  },
+  {
+    "title": "Salon Tools and Equipment",
+    "definition": "Introduction to tools and equipment used in salons with their proper usage, cleaning, and storage."
+  },
+  {
+    "title": "Workplace Safety and Sanitation",
+    "definition": "Practices for creating a safe, clean, and compliant salon environment in accordance with industry standards."
+  }
+],
 
     detailedPageLink: [
       "/course-material/beauty-wellness/introduction",
@@ -350,40 +549,40 @@ export const courseMaterial = [
 //     material: [
 //       {
 //         heading: "Introduction to MS Word",
-//         href: "/course-material/ms-word/introduction",
+//         href: "/notes/introduction",
 //       },
-//       { heading: "Formatting Text", href: "/course-material/ms-word/formatting-text" },
-//       { heading: "Working with Tables", href: "/course-material/ms-word/tables" },
-//       { heading: "Page Layout and Design", href: "/course-material/ms-word/page-layout" },
+//       { heading: "Formatting Text", href: "/notes/formatting-text" },
+//       { heading: "Working with Tables", href: "/notes/tables" },
+//       { heading: "Page Layout and Design", href: "/notes/page-layout" },
 //       {
 //         heading: "Inserting Images and Objects",
-//         href: "/course-material/ms-word/inserting-images",
+//         href: "/notes/inserting-images",
 //       },
 //       {
 //         heading: "Using Headers and Footers",
-//         href: "/course-material/ms-word/headers-footers",
+//         href: "/notes/headers-footers",
 //       },
 //       {
 //         heading: "Creating and Using Templates",
-//         href: "/course-material/ms-word/templates",
+//         href: "/notes/templates",
 //       },
 //       {
 //         heading: "Reviewing and Collaborating",
-//         href: "/course-material/ms-word/reviewing-collaborating",
+//         href: "/notes/reviewing-collaborating",
 //       },
 //       {
 //         heading: "Insert Charts and Graphs",
-//         href: "/course-material/ms-word/charts-graphs",
+//         href: "/notes/charts-graphs",
 //       },
 //       {
 //         heading: "Keyboard Shortcuts",
-//         href: "/course-material/ms-word/keyboard-shortcuts",
+//         href: "/notes/keyboard-shortcuts",
 //       },
 //       {
 //         heading: "Using Styles and Themes",
-//         href: "/course-material/ms-word/styles-themes",
+//         href: "/notes/styles-themes",
 //       },
-//       { heading: "Mail Merge Basics", href: "/course-material/ms-word/mail-merge" },
+//       { heading: "Mail Merge Basics", href: "/notes/mail-merge" },
 //     ],
 //   },
 // ];

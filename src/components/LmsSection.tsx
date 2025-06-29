@@ -1,8 +1,20 @@
+"use client"
+import { setNavbarVariant } from '@/store/store';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 export default function LmsSection() {
+
+  const dispatch = useDispatch();
+ 
+  useEffect(() => {
+    dispatch(setNavbarVariant('lms'));
+  }, [dispatch]);
+
   return (
-    <section className="relative py-20 px-4  z-10">
+    <section className="relative py-36 px-4 z-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div 
@@ -21,10 +33,10 @@ export default function LmsSection() {
             
             <div className="space-y-6">
               {[
-                { icon: '📚', title: 'Course Materials', desc: 'Access all study materials, presentations, and resources anytime' },
-                { icon: '📝', title: 'Assignments & Quizzes', desc: 'Submit assignments and take quizzes to track your progress' },
-                { icon: '🎯', title: 'Progress Tracking', desc: 'Monitor your learning journey with detailed analytics' },
-                { icon: '💬', title: 'Trainer Interaction', desc: 'Get personalized feedback and ask questions directly to trainers' },
+                { icon: '📚', title: 'Course Materials', desc: 'Access all study materials, presentations, and resources anytime', href:"/course-material" },
+                { icon: '📝', title: 'Assignments & Quizzes', desc: 'Submit assignments and take quizzes to track your progress', href:"/quiz" },
+                { icon: '🎯', title: 'Progress Tracking', desc: 'Monitor your learning journey with detailed analytics', href:"/student-progress" },
+                { icon: '💬', title: 'Trainer Interaction', desc: 'Get personalized feedback and ask questions directly to trainers' ,href:"" },
               ].map((feature, index) => (
                 <motion.div 
                   key={index}
@@ -36,7 +48,7 @@ export default function LmsSection() {
                 >
                   <div className="text-3xl mr-4 text-blue-400">{feature.icon}</div>
                   <div>
-                    <h3 className="font-bold text-lg text-white mb-2">{feature.title}</h3>
+                   <Link href={feature.href}> <h3 className="font-bold text-lg text-white mb-2">{feature.title}</h3></Link>
                     <p className="text-gray-400">{feature.desc}</p>
                   </div>
                 </motion.div>

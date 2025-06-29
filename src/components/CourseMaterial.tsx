@@ -4,10 +4,15 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
+interface Topic {
+  title: string;
+  definition: string;
+}
+
 interface Material {
   id: string;
   title: string;
-  topic: string[];
+  topic: Topic[];
   detailedPageLink: string[];
 }
 interface CourseMaterialProps {
@@ -20,9 +25,9 @@ export default function CourseMaterial({ material }: CourseMaterialProps) {
     dispatch(setNavbarVariant("course"));
   });
   return (
-    <main className="h-screen flex pt-10 px-5 ">
+    <main className=" ">
       {/* LEFT  */}
-      <section className="mt-12 lg:w-1/4  ">
+      <section className="">
         <h2 className="text-3xl border-b-2 pb-2 font-bold mb-5">
          {material.title}
         </h2>
@@ -30,14 +35,13 @@ export default function CourseMaterial({ material }: CourseMaterialProps) {
           {/* Example course materials list */}
           {
             <li className="py-2 text-xl w-full rounded-md ">
-              {material.topic.map((title,i)=>(
+              {material.topic.map((topic,i)=>(
                 <Link
                   key={i}
-                  // href={material.mswordTitleLink[i]}
                   href={material.detailedPageLink[i]}
                   className="px-4 py-2 hover:bg-gray-500/20 rounded-md block"
                 >
-                  {title}
+                  {topic.title}
                 </Link>
               ))}
             </li>
@@ -46,8 +50,8 @@ export default function CourseMaterial({ material }: CourseMaterialProps) {
         </ul>
       </section>
       {/* RIGHT */}
-      <section className="mt-12 lg:w-3/4 lg:pl-10">
-        <h2 className="text-3xl border-b-2 pb-2 font-bold mb-5">
+      {/* <section className="mt-12 lg:w-3/4 lg:pl-10"> */}
+        {/* <h2 className="text-3xl border-b-2 pb-2 font-bold mb-5">
           {material.title}
         </h2>
         <div className="prose max-w-none">
@@ -55,8 +59,9 @@ export default function CourseMaterial({ material }: CourseMaterialProps) {
             This is a placeholder for the detailed content of the course
             material. You can add rich text, images, and other elements here.
           </p>
-        </div>
-      </section>
+        </div> */}
+        {/* <Introduction/> */}
+      {/* </section> */}
     </main>
   );
 }
