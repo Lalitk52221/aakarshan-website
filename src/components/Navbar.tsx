@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import UserButton from "./UserButton";
 
 export default function Navbar() {
   const navbarVariant = useSelector((state: RootState)=>state.navbar.variant);
@@ -22,13 +23,13 @@ export default function Navbar() {
 
   // Add type for navLinks
   const navLinks: { name: string; href: string }[] = [
-    { name: "Home", href: "/#home" },
+    { name: "Home", href: "/" },
     { name: "Courses", href: "/#courses" },
     { name: "Trainers", href: "/#trainers" },
     { name: "Contact", href: "/#contact" },
-    { name: "Payment", href: "/payment" },
+    // { name: "Payment", href: "/payment" },
     // { name: "LMS", href: "/#lms" },
-    { name: "LMS", href: "/lms" },
+    // { name: "LMS", href: "/lms" },
   ];
   const course: { name: string; href: string }[] = [
     { name: "Basic Computer", href: "/course-material/basic-computer" },
@@ -98,9 +99,16 @@ export default function Navbar() {
                 >
                   {link.name}
                 </motion.span>
-              </Link>)):null}
+              </Link>
+            )):
+            navbarVariant==="auth"?"":
+            "null"}
+            {navbarVariant==="default" && (
+              
+             <UserButton/>
+            )}
           </nav>
-
+             
           {/* Desktop Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -151,6 +159,7 @@ export default function Navbar() {
             )}
           </button>
         </div>
+        
       </div>
 
       {/* Mobile Menu */}
@@ -190,6 +199,7 @@ export default function Navbar() {
             </div>
           </motion.div>
         )}
+        
       </AnimatePresence>
     </header>
   );

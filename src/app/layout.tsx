@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LoadingBarProvider from "@/components/LoadingBarProvider";
 import ReduxProvider from "@/store/ReduxProvider";
+import AuthProvider from "@/components/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +34,13 @@ export default function RootLayout({
       >
         <ReduxProvider>
         <LoadingBarProvider>
+        <AuthProvider>
           <Navbar />  
           <main className="flex-grow">
             {children}  
           </main>
           <Footer />
+        </AuthProvider>
         </LoadingBarProvider>
         </ReduxProvider>
       </body>

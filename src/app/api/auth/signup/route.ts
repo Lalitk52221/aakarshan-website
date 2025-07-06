@@ -26,7 +26,7 @@ export async function POST(request: Request) {
       }
     );
   }
-  if (password! == confirmPassword) {
+  if (password !== confirmPassword) {
     return NextResponse.json(
       {
         message: "Password do not match",
