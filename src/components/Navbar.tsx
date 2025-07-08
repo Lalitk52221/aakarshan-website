@@ -166,8 +166,8 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className={`md:hidden fixed inset-0 z-40 backdrop-blur-lg transition-colors duration-500 ${
-              scrolled ? 'bg-gray-900/95' : 'bg-gray-900/50'
+            className={` md:hidden fixed top-0  inset-0 z-40 backdrop-blur-lg transition-colors duration-500 h-screen ${
+              scrolled ? 'bg-gray-900/90' : 'bg-gray-900/50'
             }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -188,14 +188,15 @@ export default function Navbar() {
                   </motion.span>
                 </Link>
               ))}
-              <motion.button
+              {/* <motion.button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-3 rounded-full text-lg"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
                 Enroll Now
-              </motion.button>
+              </motion.button> */}
+            <UserButton/>
             </div>
           </motion.div>
         )}
