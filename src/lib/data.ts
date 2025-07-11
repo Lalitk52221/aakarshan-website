@@ -542,47 +542,68 @@ export const courseMaterial = [
     ],
   },
 ];
-// export const courseMaterial = [
-//   {
-//     id: "basic-computer",
-//     title: "Basic Computer",
-//     material: [
-//       {
-//         heading: "Introduction to MS Word",
-//         href: "/notes/introduction",
-//       },
-//       { heading: "Formatting Text", href: "/notes/formatting-text" },
-//       { heading: "Working with Tables", href: "/notes/tables" },
-//       { heading: "Page Layout and Design", href: "/notes/page-layout" },
-//       {
-//         heading: "Inserting Images and Objects",
-//         href: "/notes/inserting-images",
-//       },
-//       {
-//         heading: "Using Headers and Footers",
-//         href: "/notes/headers-footers",
-//       },
-//       {
-//         heading: "Creating and Using Templates",
-//         href: "/notes/templates",
-//       },
-//       {
-//         heading: "Reviewing and Collaborating",
-//         href: "/notes/reviewing-collaborating",
-//       },
-//       {
-//         heading: "Insert Charts and Graphs",
-//         href: "/notes/charts-graphs",
-//       },
-//       {
-//         heading: "Keyboard Shortcuts",
-//         href: "/notes/keyboard-shortcuts",
-//       },
-//       {
-//         heading: "Using Styles and Themes",
-//         href: "/notes/styles-themes",
-//       },
-//       { heading: "Mail Merge Basics", href: "/notes/mail-merge" },
-//     ],
-//   },
-// ];
+
+export const quizData = [
+  
+    {
+    "id": "1",
+    "question": "What is the shortcut key to create a company in Tally?",
+    "options": ["Alt+F3", "Ctrl+F3", "Alt+C", "Ctrl+Alt+C"],
+    "correctIndex": 0
+  },
+  {
+    "id": "2",
+    "question": "Which voucher is used to record cash deposited into bank?",
+    "options": ["Payment", "Receipt", "Contra", "Journal"],
+    "correctIndex": 2
+  },
+  {
+    "id": "3",
+    "question": "In Tally, which group does 'Rent Paid' belong to?",
+    "options": ["Direct Expenses", "Indirect Expenses", "Fixed Assets", "Current Liabilities"],
+    "correctIndex": 1
+  },
+  {
+    "id": "4",
+    "question": "What does F11 function key activate in Tally?",
+    "options": ["Calculator", "Company Info", "Features", "Inventory"],
+    "correctIndex": 2
+  },
+  {
+    "id": "5",
+    "question": "Which report shows outstanding receivables in Tally?",
+    "options": ["Trial Balance", "Day Book", "Ledger", "Bills Receivable"],
+    "correctIndex": 3
+  },
+  {
+    "id": "6",
+    "question": "What is the purpose of a ‘Stock Journal’ voucher?",
+    "options": ["Record stock transfer", "Record purchase", "Record sales", "Record payment"],
+    "correctIndex": 0
+  },
+  {
+    "id": "7",
+    "question": "Which shortcut opens the calculator in Tally?",
+    "options": ["Ctrl+C", "Ctrl+N", "Alt+C", "Ctrl+Alt+C"],
+    "correctIndex": 1
+  },
+  {
+    "id": "8",
+    "question": "What does TCS stand for in taxation?",
+    "options": ["Tax Collected at Source", "Tax Creation System", "Total Credit Sales", "None of these"],
+    "correctIndex": 0
+  },
+  {
+    "id": "9",
+    "question": "Which voucher is used for recording salary payment?",
+    "options": ["Payment", "Journal", "Payroll", "Salary Voucher"],
+    "correctIndex": 2
+  },
+  {
+    "id": "TQ110",
+    "question": "Which menu allows you to create ledgers in Tally?",
+    "options": ["Gateway of Tally", "Accounts Info", "Inventory Info", "Display"],
+    "correctIndex": 1
+  }
+
+]

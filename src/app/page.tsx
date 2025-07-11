@@ -1,67 +1,70 @@
 "use client";
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import CourseCard from '@/components/CourseCard';
-import RegistrationForm from '@/components/RegistrationForm';
-import TrainerSection from '@/components/TrainerSection';
-import LmsSection from '@/components/LmsSection';
-import ParticlesBackground from '@/components/ParticlesBackground';
-import { courses } from '@/lib/data';
-import { FaRupeeSign } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import { setNavbarVariant } from '@/store/store';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import CourseCard from "@/components/CourseCard";
+import RegistrationForm from "@/components/RegistrationForm";
+import TrainerSection from "@/components/TrainerSection";
+import LmsSection from "@/components/LmsSection";
+import ParticlesBackground from "@/components/ParticlesBackground";
+import { courses } from "@/lib/data";
+import { FaRupeeSign } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setNavbarVariant } from "@/store/store";
+import Carousel from "@/components/Carousel";
 
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
-    const dispatch = useDispatch();
-   
-    useEffect(() => {
-      dispatch(setNavbarVariant('default'));
-      // return () => {
-      //   dispatch(setNavbarVariant('default'));
-      // };
-    }, [dispatch]);
-  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setNavbarVariant("default"));
+    // return () => {
+    //   dispatch(setNavbarVariant('default'));
+    // };
+  }, [dispatch]);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
         <ParticlesBackground />
       </div>
-            
+
       {/* Hero Section */}
-      <header id='home' className="relative py-28 px-4 z-10">
+      <header id="home" className="relative py-28 px-4 z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center">
-            <motion.div 
+            <motion.div
               className="md:w-1/2 mb-10 md:mb-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
                 {/* Transform Your <span className="text-amber-400">Career</span> Today */}
-                Aakarshan Skill <span className="text-amber-400">Development</span> Center
+                Aakarshan Skill{" "}
+                <span className="text-amber-400">Development</span> Center
               </motion.h1>
-              <motion.p 
+              <motion.p
                 className="text-xl text-gray-300 mb-8 max-w-xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Affordable professional courses with industry-recognized certifications and 100% placement assistance
+                Affordable professional courses with industry-recognized
+                certifications and 100% placement assistance
               </motion.p>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
-                <button 
+                <button
                   onClick={() => setShowForm(true)}
                   className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
                 >
@@ -74,27 +77,36 @@ export default function HomePage() {
                 </p>
               </motion.div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="md:w-1/2 flex justify-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-900 to-purple-900 border border-blue-500/30 rounded-2xl w-72 h-72 md:w-96 md:h-96 shadow-2xl flex items-center justify-center">
+              <div className="relative md:w-[550px] ">
+                {/* <div className="bg-gradient-to-br from-blue-900 to-purple-900 border border-blue-500/30 rounded-2xl w-72 h-72 md:w-96 md:h-96 shadow-2xl flex items-center justify-center">
                   <div className="absolute inset-4 border border-blue-500/20 rounded-xl"></div>
                   <div className="text-center p-6">
                     <div className="text-5xl mb-4">🎓</div>
                     <h3 className="text-xl font-bold mb-2">Professional Certification</h3>
                     <p className="text-gray-400">Industry-recognized courses at minimal fees</p>
                   </div>
+                </div> */}
+                <div
+                  className="relative h-72 md:h-96 w-full min-w-[450px] 
+                 border-4 border-blue-500/30 rounded-2xl  shadow-2xl flex items-center justify-center"
+                >
+                  <div className="absolute bg-gradient-to-br h-72 md:h-96 w-full min-w-[450px]  from-black to-purple-900 rounded-2xl shadow-2xl flex items-center justify-center z-10 opacity-50"></div>
+                  <Carousel />
                 </div>
-                <motion.div 
-                  className="flex items-center justify-center absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg"
+
+                <motion.div
+                  className="z-10 flex items-center justify-center absolute -bottom-6 -right-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 2 }}
                 >
-                <FaRupeeSign size={15} />1200/- only
+                  <FaRupeeSign size={15} />
+                  1200/- only
                 </motion.div>
               </div>
             </motion.div>
@@ -105,19 +117,22 @@ export default function HomePage() {
       {/* Courses Section */}
       <section id="courses" className="relative py-20 px-4 z-10">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our <span className="text-blue-400">Professional</span> Courses</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-blue-400">Professional</span> Courses
+            </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Affordable courses designed to make you job-ready in the shortest time possible
+              Affordable courses designed to make you job-ready in the shortest
+              time possible
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {courses.map((course, index) => (
               <motion.div
@@ -146,19 +161,19 @@ export default function HomePage() {
 
       {/* Registration Form Popup */}
       {showForm && (
-        <motion.div 
+        <motion.div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <motion.div 
+          <motion.div
             className="bg-gray-800 border border-blue-500/30 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
           >
             <div className="flex justify-between items-center p-6 border-b border-blue-500/20">
               <h3 className="text-xl font-bold">Course Registration</h3>
-              <button 
+              <button
                 onClick={() => setShowForm(false)}
                 className="text-gray-400 hover:text-white transition-colors"
               >
