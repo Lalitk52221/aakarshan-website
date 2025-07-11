@@ -21,7 +21,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-xl mx-auto h-full overflow-hidden rounded-2xl shadow-lg  bg-gray-900">
+    <div className="relative w-[300px] h-56 max-w-xl md:w-full mx-auto md:h-full overflow-hidden rounded-2xl shadow-lg bg-gray-900">
       <Image
         src={images[current]}
         alt={`slide ${current + 1}`}

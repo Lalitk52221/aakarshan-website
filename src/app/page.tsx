@@ -93,10 +93,10 @@ export default function HomePage() {
                   </div>
                 </div> */}
                 <div
-                  className="relative h-72 md:h-96 w-full min-w-[450px] 
+                  className="relative h-56 md:h-96 w-full min-w-[300px] 
                  border-4 border-blue-500/30 rounded-2xl  shadow-2xl flex items-center justify-center"
                 >
-                  <div className="absolute bg-gradient-to-br h-72 md:h-96 w-full min-w-[450px]  from-black to-purple-900 rounded-2xl shadow-2xl flex items-center justify-center z-10 opacity-50"></div>
+                  <div className="absolute bg-gradient-to-br h-56 md:h-96 w-full min-w-[300px]  from-black to-purple-900 rounded-2xl shadow-2xl flex items-center justify-center z-10 opacity-50"></div>
                   <Carousel />
                 </div>
 
