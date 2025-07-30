@@ -18,15 +18,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     );
   }
   return (
-    <div className="h-screen flex pt-24 px-5 gap-4 ">
-      <div className="text-2xl font-bold w-1/4">
-        {/* Your Course {material.title} is here */}
+    <div className="min-h-screen flex flex-col md:flex-row pt-24 px-5 gap-8 bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900">
+      <div className="w-full md:w-1/3 flex flex-col items-center">
         <CourseMaterial material={material} />
       </div>
-      <div className="w-3/4 flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold">Note</h1>
-        <div>{children}</div>
-        {/* This is where the note content will be rendered */}
+      <div className="w-full md:w-2/3 flex flex-col gap-6">
+        <div className="p-8 flex flex-col items-center h-full mb-4">
+          <h1 className="text-4xl font-extrabold text-white mb-4 tracking-tight drop-shadow-lg underline">Notes</h1>
+          <div className="w-full prose max-w-none text-lg text-gray-200">
+            {children}  
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,19 @@
+.slim-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa #e0e7ff;
+}
+
+.slim-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+  border-radius: 8px;
+}
+.slim-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a78bfa 40%, #6366f1 100%);
+  /* background: red; */
+  border-radius: 8px;
+  border: 2px solid #e0e7ff;
+}
+.slim-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

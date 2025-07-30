@@ -11,11 +11,13 @@ export default function SignInPage() {
     email: "",
     password: "",
     role: "Student",
+    course: "Basic Computer",
   });
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const roleOptions = ["Admin", "Teacher", "Student"];
+  const courseOptions = ["Basic Computer", "Tally", "Spoken English", "Beauty Wellness"];
   const dispatch = useDispatch();
 
   useEffect(()=>{
@@ -32,6 +34,7 @@ export default function SignInPage() {
         email: form.email,
         password: form.password,
         role: form.role,
+        course: form.course,
       });
       if(res?.ok){
         router.push('/');
@@ -81,6 +84,26 @@ export default function SignInPage() {
               ))}
             </select>
           </div>
+          {form.role === "Student" && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Course
+              </label>
+              <select
+                className="w-full border border-gray-300 rounded-md p-2 bg-gradient-to-r from-blue-100 to-purple-100 font-semibold shadow-inner focus:ring-2 focus:ring-blue-500 transition text-gray-900"
+                value={form.course}
+                onChange={(e) => setForm({ ...form, course: e.target.value })}
+                disabled={pending}
+                required
+              >
+                {courseOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div>
             <label
               htmlFor="email"

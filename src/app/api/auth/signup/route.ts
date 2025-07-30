@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { name, email, password, confirmPassword, role } = await request.json();
+  const { name, email, password, confirmPassword, role, course } = await request.json();
 
   const isvalidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -59,12 +59,32 @@ export async function POST(request: Request) {
     console.log("Hashing Password...");
     const hashedPassword = await bcrypt.hash(password, 10);
     console.log("Creating user...");
-    const newUser = await new User({
+    console.log("Received course:", course);
+    // Always require course for students
+    const userData: {
+      name: string;
+      email: string;
+      password: string;
+      role: string;
+      course?: string;
+    } = {
       name,
       email,
       password: hashedPassword,
       role,
-    });
+    };
+    if (role === "Student") {
+      if (!course) {
+        console.log("Course missing for student!");
+        return NextResponse.json(
+          { message: "Course is required for students" },
+          { status: 400 }
+        );
+      }
+      userData.course = course;
+    }
+    console.log("Saving userData:", userData);
+    const newUser = await new User(userData);
     await newUser.save();
     console.log("User created Successfully");
     return NextResponse.json(

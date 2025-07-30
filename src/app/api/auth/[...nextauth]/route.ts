@@ -42,6 +42,7 @@ const handler = NextAuth({
         },
         password: { label: "Password", type: "password" },
         role: { label: "Role", type: "text", placeholder: "Student/Teacher" },
+        course: { label: "Course", type: "text", placeholder: "Basic Computer/Tally/etc" },
       },
       async authorize(credentials) {
         try {
@@ -64,6 +65,11 @@ const handler = NextAuth({
 
           if (user.role !== credentials.role) {
             throw new Error("Role not matched");
+          }
+
+          // For students, require course match
+          if (user.role === "Student" && user.course !== credentials.course) {
+            throw new Error("Course not matched");
           }
 
           return user;

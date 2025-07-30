@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import UserButton from "./UserButton";
 
 export default function Navbar() {
   const navbarVariant = useSelector((state: RootState)=>state.navbar.variant);
+  const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,14 +24,12 @@ export default function Navbar() {
   }, []);
 
   // Add type for navLinks
-  const navLinks: { name: string; href: string }[] = [
+    const navLinks: { name: string; href: string }[] = [
     { name: "Home", href: "/" },
     { name: "Courses", href: "/#courses" },
     { name: "Trainers", href: "/#trainers" },
     { name: "Contact", href: "/#contact" },
-    // { name: "Payment", href: "/payment" },
-    // { name: "LMS", href: "/#lms" },
-    // { name: "LMS", href: "/lms" },
+    ...(session?.user?.role === "Admin" ? [{ name: "Admin", href: "/admin" }] : [])
   ];
   const course: { name: string; href: string }[] = [
     { name: "Basic Computer", href: "/course-material/basic-computer" },
@@ -103,25 +103,21 @@ export default function Navbar() {
             )):
             navbarVariant==="auth"?"":
             "null"}
+            
+          </nav>
+             
+          {/* Desktop Button */}
+          {/* <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          > */}
+            
+    
             {navbarVariant==="default" && (
               
              <UserButton/>
             )}
-          </nav>
-             
-          {/* Desktop Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Image
-                src="/images/SMF.png"
-                width={100}
-                height={100}
-                alt="logo"
-                className="hidden w-full md:block "
-              />
-          </motion.button>
+          {/* </motion.button> */}
 
           {/* Mobile Menu Button */}
           <button

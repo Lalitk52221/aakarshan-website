@@ -27,7 +27,7 @@ export default function UserButton() {
         <Loader className="size-6 mr-4 mt-4 float-right animate-spin" />
       ) : session ? (
         <DropdownMenu.Root>
-          <div className="flex items-center gap-3 md:border-l-2 border-gray-300 pl-3 pr-4 ">
+          <div className="flex items-center gap-3 md:border-r-2 border-gray-300 pl-3 pr-4 ">
             <div className="md:flex md:flex-col place-items-end text-right md:justify-end hidden ">
               <span className="">{session.user.name}</span>
               <span className="text-sm text-gray-500">{session.user.role}</span>
@@ -46,9 +46,17 @@ export default function UserButton() {
               </button>
             </DropdownMenu.Trigger>
           </div>
-          <DropdownMenu.Portal>
+          
+
+          <DropdownMenu.Portal >
+         
+          {/* <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            > */}
+            
             <DropdownMenu.Content
-              className="mt-3 min-w-[100px] rounded-md bg-white p-[5px] z-100 hover:bg-amber-500 cursor-pointer shadow-md "
+              className="mt-3 min-w-[100px] rounded-md bg-white p-[5px] z-100 hover:bg-amber-500 cursor-pointer shadow-md  "
               sideOffset={5}
             >
               <DropdownMenu.Item
@@ -58,6 +66,8 @@ export default function UserButton() {
                 Logout
               </DropdownMenu.Item>
             </DropdownMenu.Content>
+            {/* </motion.button> */}
+               
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
       ) : (

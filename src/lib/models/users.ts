@@ -6,6 +6,7 @@ interface IUser extends Document {
   password: string;
   role: string;
   id: string;
+  course?: string;
 }
 
 const UserSchema: Schema<IUser> = new mongoose.Schema({
@@ -17,6 +18,11 @@ const UserSchema: Schema<IUser> = new mongoose.Schema({
     enum: ["Admin", "Teacher", "Student"],
     default: "Student",
     required: true,
+  },
+  course: {
+    type: String,
+    enum: ["Basic Computer", "Tally", "Spoken English", "Beauty Wellness"],
+    required: false,
   },
 });
 const User: Model<IUser> =
