@@ -32,7 +32,7 @@ export default function CourseMaterial({ material }: CourseMaterialProps) {
         <h2 className="text-3xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg text-center">
           {material.title}
         </h2>
-        <ul className="overflow-y-scroll h-[70vh] scroll scroll-smooth flex flex-col gap-4 slim-scrollbar px-4">
+        <ul className="overflow-y-scroll h-[80vh] scroll scroll-smooth flex flex-col gap-4 slim-scrollbar px-4">
           {material.topic.map((topic, i) => (
             <li key={i} className="w-full">
               <Link

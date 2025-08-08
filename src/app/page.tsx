@@ -8,12 +8,18 @@ import LmsSection from "@/components/LmsSection";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import { courses } from "@/lib/data";
 import { FaRupeeSign } from "react-icons/fa";
-import { useDispatch } from "react-redux";
-import { setNavbarVariant } from "@/store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, setNavbarVariant } from "@/store/store";
 import Carousel from "@/components/Carousel";
+import { IoAccessibility } from "react-icons/io5";
+import AccessibilityPage from "@/components/AccessibilityPage";
+import NewEventPage from "@/components/NewEventPage";
 
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
+  const [showAccessibility, setShowAccessibility] = useState(false);
+  const [event,setEvent] = useState(false);
+  const theme = useSelector((state: RootState) => state.theme.mode);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,10 +30,10 @@ export default function HomePage() {
   }, [dispatch]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+    <div className={`min-h-screen ${theme==="dark"?"bg-gray-900 text-white":"bg-blue-100 text-gray-900"} relative overflow-hidden`}>
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
-        <ParticlesBackground />
+       {theme === "dark" ?<ParticlesBackground />:""} 
       </div>
 
       {/* Hero Section */}
@@ -51,13 +57,13 @@ export default function HomePage() {
                 <span className="text-amber-400">Development</span> Center
               </motion.h1>
               <motion.p
-                className="text-xl text-gray-300 mb-8 max-w-xl"
+                className={`text-xl ${theme==="dark"?"text-gray-300":"text-gray-700"} mb-8 max-w-xl`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 Affordable professional courses with industry-recognized
-                certifications and 100% placement assistance
+                certifications.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -71,7 +77,7 @@ export default function HomePage() {
                   <span className="relative z-10">Enroll Today</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </button>
-                <p className="mt-4 text-gray-400 flex items-center">
+                <p className={`mt-4 ${theme==="dark"?"text-gray-400":"text-gray-700"} flex items-center`}>
                   <span className="inline-block w-8 h-px bg-blue-500 mr-2"></span>
                   Limited seats available for upcoming batches
                 </p>
@@ -93,11 +99,11 @@ export default function HomePage() {
                   </div>
                 </div> */}
                 <div
-                  className="relative h-56 md:h-96 w-full min-w-[300px] 
-                 border-4 border-blue-500/30 rounded-2xl shadow-2xl flex items-center justify-center"
+                  className={`relative h-56 md:h-96 w-full min-w-[300px] 
+                 border-4 ${theme==="dark"?"border-blue-500/30":"border-blue-700/80"} rounded-2xl shadow-2xl flex items-center justify-center`}
                 >
-                  <div className="absolute bg-gradient-to-br h-full w-full min-w-[300px]  from-black to-purple-900 rounded-2xl shadow-2xl flex items-center justify-center z-10 opacity-50"></div>
-                  <Carousel />
+                  {/* <div className="absolute bg-gradient-to-br h-full w-full min-w-[300px]  from-black to-purple-900 rounded-2xl shadow-2xl flex items-center justify-center z-10 opacity-50"></div> */}
+                  {event? <NewEventPage />:<Carousel />}
                 </div>
 
                 <motion.div
@@ -125,9 +131,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-blue-400">Professional</span> Courses
+              Our <span className={`${theme==="dark"?"text-blue-400":"text-blue-600"}`}>Professional</span> Courses
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className={`${theme==="dark"?"text-gray-300":"text-gray-700"} max-w-2xl mx-auto`}>
               Affordable courses designed to make you job-ready in the shortest
               time possible
             </p>
@@ -142,7 +148,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <CourseCard course={course} />
+                <CourseCard theme={theme === "dark" ? "dark" : "light"} course={course} />
               </motion.div>
             ))}
           </div>
@@ -151,7 +157,7 @@ export default function HomePage() {
 
       {/* Trainers Section */}
       <section id="trainers">
-        <TrainerSection />
+        <TrainerSection theme={theme==="dark"?"dark":"light"} />
       </section>
 
       {/* LMS Section */}
@@ -198,6 +204,35 @@ export default function HomePage() {
           <span className="mr-2">📝</span> Enroll Now
         </span>
       </motion.button>
+      {/* Floating Enroll Button */}
+      <motion.button
+        className="fixed bottom-8 left-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold p-4 rounded-full shadow-lg z-40"
+        onClick={() => setShowAccessibility(true)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        animate={{ y: [0, -10, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+      >
+        <span className="flex items-center">
+          <IoAccessibility size={30} className="cursor-pointer" />
+        </span>
+      </motion.button>
+
+      {/* Accessibility Section */}
+      {showAccessibility && (
+        <div className="absolute top-0 left-0 z-50 w-96 h-screen bg-gray-800 shadow-lg">
+          <div className="flex items-center justify-between p-4 bg-gray-700 rounded-t-lg ">
+            <h1>Accessibility Feature</h1>
+            <button
+              onClick={() => setShowAccessibility(false)}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              ✕
+            </button>
+          </div>
+          <AccessibilityPage />
+        </div>
+      )}
     </div>
   );
 }

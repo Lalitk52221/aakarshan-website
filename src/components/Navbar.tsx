@@ -10,6 +10,7 @@ import UserButton from "./UserButton";
 
 export default function Navbar() {
   const navbarVariant = useSelector((state: RootState)=>state.navbar.variant);
+  const theme = useSelector((state: RootState)=>state.theme.mode);
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -55,6 +56,8 @@ export default function Navbar() {
     <header
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled
+          ? "backdrop-blur-md border-b border-blue-500/20 py-2"
+          : theme === "dark"
           ? "bg-gray-900/50 backdrop-blur-md border-b border-blue-500/20 py-2"
           : "bg-transparent py-4"
       }`}
@@ -83,7 +86,7 @@ export default function Navbar() {
             {navbarVariant==="default"? navLinks.map((link) => (
               <Link key={link.name} href={link.href} scroll={false}>
                 <motion.span
-                  className="text-gray-300 hover:text-orange-400 hover:text-lg transition-all font-medium cursor-pointer"
+                  className={`${theme==="dark"?"text-gray-300 hover:text-orange-400":"text-blue-700 hover:text-orange-700"}  hover:text-lg transition-all cursor-pointer font-semibold`}
                   whileHover={{ y: -2 }}
                   onClick={e => handleNavClick(e, link.href)}
                 >

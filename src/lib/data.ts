@@ -427,47 +427,57 @@ export const courseMaterial = [
     id: "spoken-english",
     title: "Spoken English",
     topic: [
-  {
-    "title": "Basics of English Grammar",
-    "definition": "Introduction to fundamental grammar rules including parts of speech, sentence structure, and punctuation."
-  },
-  {
-    "title": "Common Vocabulary for Daily Use",
-    "definition": "Essential words and phrases used in everyday conversations, including greetings, actions, and objects."
-  },
-  {
-    "title": "Building Simple Sentences",
-    "definition": "Forming clear and correct sentences using subject-verb-object structures for basic communication."
-  },
-  {
-    "title": "Using Tenses in Conversation",
-    "definition": "Understanding and applying verb tenses like present, past, and future in everyday dialogue."
-  },
-  {
-    "title": "Asking and Answering Questions",
-    "definition": "Practicing question formats and appropriate responses for various real-life scenarios."
-  },
-  {
-    "title": "Telephone and Email Etiquette",
-    "definition": "Learning polite and professional communication techniques for calls and email writing."
-  },
-  {
-    "title": "Making Introductions and Greetings",
-    "definition": "Techniques to introduce oneself and others, and to greet appropriately in formal and informal settings."
-  },
-  {
-    "title": "Describing People and Places",
-    "definition": "Using adjectives and descriptive language to talk about appearances, personalities, and surroundings."
-  },
-  {
-    "title": "Speaking with Confidence",
-    "definition": "Building communication skills through activities that enhance pronunciation, clarity, and fluency."
-  },
-  {
-    "title": "Common Interview Questions",
-    "definition": "Reviewing frequently asked job interview questions and practicing effective responses."
-  }
-],
+      {
+        title: "Basics of English Grammar",
+        definition:
+          "Introduction to fundamental grammar rules including parts of speech, sentence structure, and punctuation.",
+      },
+      {
+        title: "Common Vocabulary for Daily Use",
+        definition:
+          "Essential words and phrases used in everyday conversations, including greetings, actions, and objects.",
+      },
+      {
+        title: "Building Simple Sentences",
+        definition:
+          "Forming clear and correct sentences using subject-verb-object structures for basic communication.",
+      },
+      {
+        title: "Using Tenses in Conversation",
+        definition:
+          "Understanding and applying verb tenses like present, past, and future in everyday dialogue.",
+      },
+      {
+        title: "Asking and Answering Questions",
+        definition:
+          "Practicing question formats and appropriate responses for various real-life scenarios.",
+      },
+      {
+        title: "Telephone and Email Etiquette",
+        definition:
+          "Learning polite and professional communication techniques for calls and email writing.",
+      },
+      {
+        title: "Making Introductions and Greetings",
+        definition:
+          "Techniques to introduce oneself and others, and to greet appropriately in formal and informal settings.",
+      },
+      {
+        title: "Describing People and Places",
+        definition:
+          "Using adjectives and descriptive language to talk about appearances, personalities, and surroundings.",
+      },
+      {
+        title: "Speaking with Confidence",
+        definition:
+          "Building communication skills through activities that enhance pronunciation, clarity, and fluency.",
+      },
+      {
+        title: "Common Interview Questions",
+        definition:
+          "Reviewing frequently asked job interview questions and practicing effective responses.",
+      },
+    ],
 
     detailedPageLink: [
       "/course-material/spoken-english/grammar-basics",
@@ -485,48 +495,58 @@ export const courseMaterial = [
   {
     id: "beauty-wellness",
     title: "Beauty Wellness",
-    topic:[
-  {
-    "title": "Introduction to Beauty & Wellness",
-    "definition": "Overview of the beauty and wellness industry, career opportunities, and the importance of personal care."
-  },
-  {
-    "title": "Skin Anatomy and Care Techniques",
-    "definition": "Understanding skin layers, types, and effective methods for daily skincare and treatment preparation."
-  },
-  {
-    "title": "Basic Facial Treatments",
-    "definition": "Step-by-step facial procedures including cleansing, exfoliation, massage, and masking."
-  },
-  {
-    "title": "Hair Styling and Hair Care",
-    "definition": "Fundamentals of hair types, hair health, and techniques for cutting, styling, and maintenance."
-  },
-  {
-    "title": "Manicure and Pedicure Basics",
-    "definition": "Essential practices for nail grooming, hygiene, and relaxation techniques for hands and feet."
-  },
-  {
-    "title": "Personal Grooming Essentials",
-    "definition": "Daily hygiene routines and grooming practices to maintain a professional and polished appearance."
-  },
-  {
-    "title": "Client Consultation and Hygiene",
-    "definition": "Conducting effective consultations and maintaining hygiene protocols to ensure client satisfaction and safety."
-  },
-  {
-    "title": "Makeup Application Techniques",
-    "definition": "Basic makeup theory, face analysis, and application skills for various looks and occasions."
-  },
-  {
-    "title": "Salon Tools and Equipment",
-    "definition": "Introduction to tools and equipment used in salons with their proper usage, cleaning, and storage."
-  },
-  {
-    "title": "Workplace Safety and Sanitation",
-    "definition": "Practices for creating a safe, clean, and compliant salon environment in accordance with industry standards."
-  }
-],
+    topic: [
+      {
+        title: "Introduction to Beauty & Wellness",
+        definition:
+          "Overview of the beauty and wellness industry, career opportunities, and the importance of personal care.",
+      },
+      {
+        title: "Skin Anatomy and Care Techniques",
+        definition:
+          "Understanding skin layers, types, and effective methods for daily skincare and treatment preparation.",
+      },
+      {
+        title: "Basic Facial Treatments",
+        definition:
+          "Step-by-step facial procedures including cleansing, exfoliation, massage, and masking.",
+      },
+      {
+        title: "Hair Styling and Hair Care",
+        definition:
+          "Fundamentals of hair types, hair health, and techniques for cutting, styling, and maintenance.",
+      },
+      {
+        title: "Manicure and Pedicure Basics",
+        definition:
+          "Essential practices for nail grooming, hygiene, and relaxation techniques for hands and feet.",
+      },
+      {
+        title: "Personal Grooming Essentials",
+        definition:
+          "Daily hygiene routines and grooming practices to maintain a professional and polished appearance.",
+      },
+      {
+        title: "Client Consultation and Hygiene",
+        definition:
+          "Conducting effective consultations and maintaining hygiene protocols to ensure client satisfaction and safety.",
+      },
+      {
+        title: "Makeup Application Techniques",
+        definition:
+          "Basic makeup theory, face analysis, and application skills for various looks and occasions.",
+      },
+      {
+        title: "Salon Tools and Equipment",
+        definition:
+          "Introduction to tools and equipment used in salons with their proper usage, cleaning, and storage.",
+      },
+      {
+        title: "Workplace Safety and Sanitation",
+        definition:
+          "Practices for creating a safe, clean, and compliant salon environment in accordance with industry standards.",
+      },
+    ],
 
     detailedPageLink: [
       "/course-material/beauty-wellness/introduction",
@@ -544,66 +564,110 @@ export const courseMaterial = [
 ];
 
 export const quizData = [
-  
-    {
-    "id": "1",
-    "question": "What is the shortcut key to create a company in Tally?",
-    "options": ["Alt+F3", "Ctrl+F3", "Alt+C", "Ctrl+Alt+C"],
-    "correctIndex": 0
+  {
+    id: "1",
+    question: "What is the shortcut key to create a company in Tally?",
+    options: ["Alt+F3", "Ctrl+F3", "Alt+C", "Ctrl+Alt+C"],
+    correctIndex: 0,
   },
   {
-    "id": "2",
-    "question": "Which voucher is used to record cash deposited into bank?",
-    "options": ["Payment", "Receipt", "Contra", "Journal"],
-    "correctIndex": 2
+    id: "2",
+    question: "Which voucher is used to record cash deposited into bank?",
+    options: ["Payment", "Receipt", "Contra", "Journal"],
+    correctIndex: 2,
   },
   {
-    "id": "3",
-    "question": "In Tally, which group does 'Rent Paid' belong to?",
-    "options": ["Direct Expenses", "Indirect Expenses", "Fixed Assets", "Current Liabilities"],
-    "correctIndex": 1
+    id: "3",
+    question: "In Tally, which group does 'Rent Paid' belong to?",
+    options: [
+      "Direct Expenses",
+      "Indirect Expenses",
+      "Fixed Assets",
+      "Current Liabilities",
+    ],
+    correctIndex: 1,
   },
   {
-    "id": "4",
-    "question": "What does F11 function key activate in Tally?",
-    "options": ["Calculator", "Company Info", "Features", "Inventory"],
-    "correctIndex": 2
+    id: "4",
+    question: "What does F11 function key activate in Tally?",
+    options: ["Calculator", "Company Info", "Features", "Inventory"],
+    correctIndex: 2,
   },
   {
-    "id": "5",
-    "question": "Which report shows outstanding receivables in Tally?",
-    "options": ["Trial Balance", "Day Book", "Ledger", "Bills Receivable"],
-    "correctIndex": 3
+    id: "5",
+    question: "Which report shows outstanding receivables in Tally?",
+    options: ["Trial Balance", "Day Book", "Ledger", "Bills Receivable"],
+    correctIndex: 3,
   },
   {
-    "id": "6",
-    "question": "What is the purpose of a ‘Stock Journal’ voucher?",
-    "options": ["Record stock transfer", "Record purchase", "Record sales", "Record payment"],
-    "correctIndex": 0
+    id: "6",
+    question: "What is the purpose of a ‘Stock Journal’ voucher?",
+    options: [
+      "Record stock transfer",
+      "Record purchase",
+      "Record sales",
+      "Record payment",
+    ],
+    correctIndex: 0,
   },
   {
-    "id": "7",
-    "question": "Which shortcut opens the calculator in Tally?",
-    "options": ["Ctrl+C", "Ctrl+N", "Alt+C", "Ctrl+Alt+C"],
-    "correctIndex": 1
+    id: "7",
+    question: "Which shortcut opens the calculator in Tally?",
+    options: ["Ctrl+C", "Ctrl+N", "Alt+C", "Ctrl+Alt+C"],
+    correctIndex: 1,
   },
   {
-    "id": "8",
-    "question": "What does TCS stand for in taxation?",
-    "options": ["Tax Collected at Source", "Tax Creation System", "Total Credit Sales", "None of these"],
-    "correctIndex": 0
+    id: "8",
+    question: "What does TCS stand for in taxation?",
+    options: [
+      "Tax Collected at Source",
+      "Tax Creation System",
+      "Total Credit Sales",
+      "None of these",
+    ],
+    correctIndex: 0,
   },
   {
-    "id": "9",
-    "question": "Which voucher is used for recording salary payment?",
-    "options": ["Payment", "Journal", "Payroll", "Salary Voucher"],
-    "correctIndex": 2
+    id: "9",
+    question: "Which voucher is used for recording salary payment?",
+    options: ["Payment", "Journal", "Payroll", "Salary Voucher"],
+    correctIndex: 2,
   },
   {
-    "id": "TQ110",
-    "question": "Which menu allows you to create ledgers in Tally?",
-    "options": ["Gateway of Tally", "Accounts Info", "Inventory Info", "Display"],
-    "correctIndex": 1
-  }
+    id: "TQ110",
+    question: "Which menu allows you to create ledgers in Tally?",
+    options: ["Gateway of Tally", "Accounts Info", "Inventory Info", "Display"],
+    correctIndex: 1,
+  },
+];
 
-]
+export const accessibilityFeatures = [
+  
+  {
+    id: 2,
+    title: "Keyboard Navigation",
+    description:
+      "Full keyboard navigation support for users who prefer not to use a mouse.",
+    icon: "⌨️",
+  },
+  {
+    id: 3,
+    title: "Screen Reader Compatibility",
+    description:
+      "Optimized for screen readers to assist visually impaired users.",
+    icon: "👀",
+  },
+  {
+    id: 4,
+    title: "Text Resizing",
+    description:
+      "Ability to resize text without breaking the layout for better readability.",
+    icon: "🔍",
+  },
+  {
+    id: 5,
+    title: "High Contrast Mode",
+    description: "A high contrast mode for users with visual impairments.",
+    icon: "⚫️⚪️",
+  },
+];

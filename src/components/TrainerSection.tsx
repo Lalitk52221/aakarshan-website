@@ -2,7 +2,7 @@ import { trainers } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-export default function TrainerSection() {
+export default function TrainerSection(props: { theme: "dark" | "light" }) {
   
   return (
     <section className="relative py-20 px-4 z-10">
@@ -14,8 +14,8 @@ export default function TrainerSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our <span className="text-blue-400">Expert</span> Trainers</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our <span className={`${props.theme==="dark"?"text-blue-400":"text-blue-600"}`}>Expert</span> Trainers</h2>
+          <p className={`${props.theme==="dark"?"text-gray-400":"text-gray-700"} max-w-2xl mx-auto`}>
             Learn from industry professionals with years of teaching experience
           </p>
         </motion.div>
@@ -30,9 +30,9 @@ export default function TrainerSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <div className="h-full bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/20 rounded-2xl overflow-hidden shadow-xl flex flex-col">
+              <div className={`h-full bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/20 rounded-2xl overflow-hidden shadow-xl flex flex-col`}>
                 <div className="p-1 flex-1 flex flex-col">
-                  <div className="bg-gray-900 rounded-xl p-6 h-full flex flex-col justify-between">
+                  <div className={` ${props.theme==="dark"?"bg-gray-900":"bg-blue-100"} rounded-xl p-6 h-full flex flex-col justify-between `}>
                     <div className="flex flex-col items-center mb-6">
                       <div className="relative mb-4">
                         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-1 rounded-full">
@@ -47,26 +47,26 @@ export default function TrainerSection() {
                             {/* </div> */}
                           </div>
                         </div>
-                        <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        <div className={`absolute -bottom-2 -right-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full`}>
                           {trainer.experience}
                         </div>
                       </div>
-                      <h3 className="text-xl font-bold text-white">{trainer.name}</h3>
-                      <p className="text-blue-400 font-medium">{trainer.expertise}</p>
+                      <h3 className={`${props.theme==="dark"?"text-xl font-bold text-white":"text-xl font-bold text-gray-900"}  `}>{trainer.name}</h3>
+                      <p className={`${props.theme==="dark"?"text-blue-400":"text-blue-600"} font-medium`}>{trainer.expertise}</p>
                     </div>
                     
                     <div className="mb-6">
                       <h4 className="font-semibold mb-3 text-blue-400">Courses:</h4>
                       <div className="flex flex-wrap gap-2">
                         {trainer.courses.map((course, index) => (
-                          <span key={index} className="bg-blue-900/50 text-blue-400 text-xs px-3 py-1 rounded-full">
+                          <span key={index} className={`${props.theme==="dark"?"bg-blue-900/50 text-blue-400":"bg-blue-600/50 text-blue-600"} text-xs px-3 py-1 rounded-full`}>
                             {course}
                           </span>
                         ))}
                       </div>
                     </div>
-                    
-                    <p className="text-gray-400">{trainer.bio}</p>
+
+                    <p className={`${props.theme==="dark"?"text-gray-400":"text-gray-600"}`}>{trainer.bio}</p>
                   </div>
                 </div>
               </div>

@@ -4,10 +4,13 @@ import { useRouter } from "next/navigation";
 import { Loader } from "lucide-react";
 import React from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export default function UserButton() {
   const router = useRouter();
   const { data: session, status } = useSession();
+  const theme = useSelector((state: RootState) => state.theme.mode);
 
   //   if (status === "loading") {
   //     return <Loader className="size-6 mr-4 mt-4 float-right animate-spin" />;
@@ -29,7 +32,7 @@ export default function UserButton() {
         <DropdownMenu.Root>
           <div className="flex items-center gap-3 md:border-r-2 border-gray-300 pl-3 pr-4 ">
             <div className="md:flex md:flex-col place-items-end text-right md:justify-end hidden ">
-              <span className="">{session.user.name}</span>
+              <span className={`${theme === "dark" ? "text-white" : "text-gray-800"}  `}>{session.user.name}</span>
               <span className="text-sm text-gray-500">{session.user.role}</span>
             </div>
             <DropdownMenu.Trigger asChild>
