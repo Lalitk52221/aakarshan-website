@@ -124,7 +124,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 focus:outline-none z-50"
+            className={`md:hidden${theme==="dark"?" text-gray-300":"text-gray-800"} focus:outline-none z-50`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (

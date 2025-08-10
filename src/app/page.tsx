@@ -18,7 +18,8 @@ import NewEventPage from "@/components/NewEventPage";
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
   const [showAccessibility, setShowAccessibility] = useState(false);
-  const [event,setEvent] = useState(false);
+  // const [event,setEvent] = useState(false);
+  const event = false;
   const theme = useSelector((state: RootState) => state.theme.mode);
   const dispatch = useDispatch();
 
@@ -157,7 +158,7 @@ export default function HomePage() {
 
       {/* Trainers Section */}
       <section id="trainers">
-        <TrainerSection theme={theme==="dark"?"dark":"light"} />
+        <TrainerSection theme={theme === "dark" ? "dark" : "light"} />
       </section>
 
       {/* LMS Section */}
@@ -220,12 +221,12 @@ export default function HomePage() {
 
       {/* Accessibility Section */}
       {showAccessibility && (
-        <div className="absolute top-0 left-0 z-50 w-96 h-screen bg-gray-800 shadow-lg">
-          <div className="flex items-center justify-between p-4 bg-gray-700 rounded-t-lg ">
+        <div className="fixed top-0 left-0 z-50 w-96 h-screen bg-transparent shadow-lg">
+          <div className={`flex items-center justify-between p-4 ${theme==="dark"?"bg-gray-700":"bg-blue-400"} rounded-t-lg`}>
             <h1>Accessibility Feature</h1>
             <button
               onClick={() => setShowAccessibility(false)}
-              className="text-gray-400 hover:text-white transition-colors"
+              className={` ${theme==="dark"?"text-gray-400":"text-gray-800"} hover:text-white transition-colors`}
             >
               ✕
             </button>

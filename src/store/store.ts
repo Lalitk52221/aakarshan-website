@@ -14,7 +14,7 @@ const navbarSlice = createSlice({
 
 const themeSlice = createSlice({
     name: 'theme',
-    initialState: { mode: 'light' }, // or 'light' as default
+    initialState: { mode: 'dark' }, // or 'light' as default
     reducers: {
         setTheme: (state, action) => {
             state.mode = action.payload;

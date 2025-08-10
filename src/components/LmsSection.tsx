@@ -1,13 +1,14 @@
 "use client"
-import { setNavbarVariant } from '@/store/store';
+import { RootState, setNavbarVariant } from '@/store/store';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function LmsSection() {
 
   const dispatch = useDispatch();
+  const theme = useSelector((state:RootState)=>state.theme.mode);
  
   useEffect(() => {
     dispatch(setNavbarVariant('lms'));
@@ -25,9 +26,9 @@ export default function LmsSection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our <span className="text-blue-400">Learning Management</span> System
+              Our <span className={`${theme==="dark"?"text-blue-400":"text-blue-600"}`}>Learning Management</span> System
             </h2>
-            <p className="text-gray-400 mb-10">
+            <p className={`${theme==="dark"?"text-gray-400":"text-gray-800"} mb-10`}>
               Access course materials, submit assignments, track progress, and interact with trainers through our modern LMS platform.
             </p>
             
@@ -40,7 +41,7 @@ export default function LmsSection() {
               ].map((feature, index) => (
                 <motion.div 
                   key={index}
-                  className="flex items-start p-4 bg-gray-800 rounded-xl border border-blue-500/20"
+                  className={`flex items-start p-4 ${theme==="dark"?"bg-gray-800":"bg-blue-400"} rounded-xl border-2 ${theme==="dark"?"border-blue-500/20 shadow":"border-purple-300"} `}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -49,7 +50,7 @@ export default function LmsSection() {
                   <div className="text-3xl mr-4 text-blue-400">{feature.icon}</div>
                   <div>
                    <Link href={feature.href}> <h3 className="font-bold text-lg text-white mb-2">{feature.title}</h3></Link>
-                    <p className="text-gray-400">{feature.desc}</p>
+                    <p className={`${theme==="dark"?"text-gray-400":"text-gray-800"}`}>{feature.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -71,11 +72,11 @@ export default function LmsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl p-1">
-              <div className="bg-gray-900 rounded-xl p-8">
+            <div className={`${theme==="dark"?"bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30":"bg-gradient-to-br from-blue-500/80 to-purple-600/80 border border-blue-500/30"} rounded-2xl p-1`}>
+              <div className={`${theme==="dark"?"bg-gray-900":"bg-blue-400"} rounded-xl p-8`}>
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl opacity-20 rounded-xl"></div>
-                  <div className="bg-gray-800 rounded-xl p-6 relative z-10">
+                  <div className={`${theme==="dark"?"bg-gray-800":"bg-blue-600"} rounded-xl p-6 relative z-10`}>
                     <div className="flex justify-between mb-8">
                       <div>
                         <div className="text-2xl font-bold text-white">LMS Dashboard</div>
@@ -127,16 +128,16 @@ export default function LmsSection() {
                 
                 <div className="flex justify-between mt-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">95%</div>
-                    <div className="text-gray-400">Completion</div>
+                    <div className={`text-2xl font-bold ${theme==="dark"?"text-blue-400":"text-blue-800"}`}>95%</div>
+                    <div className={`${theme==="dark"?"text-gray-400":"text-gray-800"}`}>Completion</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">4.8/5</div>
-                    <div className="text-gray-400">Satisfaction</div>
+                    <div className={`text-2xl font-bold ${theme==="dark"?"text-blue-400":"text-blue-800"}`}>4.8/5</div>
+                    <div className={`${theme==="dark"?"text-gray-400":"text-gray-800"}`}>Satisfaction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">80%</div>
-                    <div className="text-gray-400">Placement</div>
+                    <div className={`text-2xl font-bold ${theme==="dark"?"text-blue-400":"text-blue-800"}`}>80%</div>
+                    <div className={`${theme==="dark"?"text-gray-400":"text-gray-800"}`}>Placement</div>
                   </div>
                 </div>
               </div>

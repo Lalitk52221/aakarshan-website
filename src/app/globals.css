@@ -15,9 +15,16 @@ html{
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+    --background: #ededed;
+    --foreground: #0a0a0a;
+    
+  }
+} */
+@media (prefers-color-scheme:dark) {
+  :root {
+    --background:  #0a0a0a;
     --foreground: #ededed;
     
   }
